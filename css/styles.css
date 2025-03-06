@@ -14,6 +14,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+@media (max-width: 767px) {
+    /* ... other styles ... */
+    h1 {
+        font-size: 3.5rem;
+    }
+    /* ... other styles ... */
+}
+
 @media (max-width: 420px) {
     .h0.typed-words span:nth-child(2)::before {
         content: "\A";
@@ -23,14 +31,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       height: 180px; /* adjust as needed for smaller screens */
     }
 
-}
-
-@media (max-width: 767px) {
-  /* ... other styles ... */
-  h1 {
-    font-size: 2.8rem; /* or another size you want */
-  }
-  /* ... other styles ... */
 }
 
 audio, canvas, progress, video {
