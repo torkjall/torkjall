@@ -25,16 +25,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 }
 
-@media (max-width: 767px) {
-    .h0.typed-words span:nth-child(2)::before {
-        content: "\A";
-        white-space: pre;
-    }
-    .h0.typed-words{
-      height: 180px; /* adjust as needed for smaller screens */
-    }
-
-}
 
 audio, canvas, progress, video {
   vertical-align: baseline;
