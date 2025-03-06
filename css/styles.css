@@ -59,10 +59,7 @@ dfn {
   font-style: italic;
 }
 
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
-}
+
 
 mark {
   color: #000;
@@ -407,7 +404,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-top: 20px;
-
   line-height: 44px;
 }
 
@@ -2310,7 +2306,7 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: -.05em;
- 
+
   font-weight: 600;
   line-height: 1.3;
 }
