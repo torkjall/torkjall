@@ -17,10 +17,11 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      height: 100vh;
+      height: 100%;
       padding: 0;
-      overflow: hidden;
+      overflow: auto; /* Allow scrolling */
       position: relative;
+      flex-direction: column;
     }
 
     /* Container */
@@ -119,7 +120,7 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 150vh; /* Ensures it is below the fold (requires scrolling) */
+      margin-top: 120vh; /* Pushes portfolio section way down the page */
       padding: 50px 20px;
       background-color: #222220;
       width: 100%;
@@ -174,6 +175,26 @@
       transform: scale(1.05);
     }
 
+    /* Cursor styling */
+    .typed-cursor {
+      font-size: 100px;
+      color: #FFFFFF;
+      font-weight: 500;
+      position: absolute;
+      animation: blink 0.8s step-end infinite;
+      height: 100%;
+      line-height: 100%;
+      display: inline-block;
+      margin-left: 2px;
+    }
+
+    /* Blinking effect for cursor */
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
   </style>
 </head>
 
@@ -211,6 +232,7 @@
           <a href="https://www.example.com" target="_blank">View Full Case Study →</a>
         </div>
       </div>
+      <!-- Add more portfolio items as needed -->
     </div>
   </div>
 
