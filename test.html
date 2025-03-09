@@ -81,17 +81,16 @@
     }
 
     /* Cursor styling */
-     .typed-cursor {
-  font-size: 108px; /* Make it even bigger */
+    .typed-cursor {
+  font-size: 108px; /* Bigger cursor */
   color: #FFFFFF;
   font-weight: 500;
   position: absolute;
   animation: blink 0.8s step-end infinite;
-  line-height: 88px; /* Match text height */
-  height: 88px; /* Prevents overflow */
+  line-height: 88px; /* Same as text */
+  height: 88px; /* Ensures alignment */
   display: inline-block;
-  margin: -10px 0 0 4px; /* Adjust vertical & horizontal position */
-  padding: 0;
+  vertical-align: baseline; /* Align cursor with text */
 }
 
 
