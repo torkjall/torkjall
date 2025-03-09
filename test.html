@@ -144,51 +144,27 @@
 
     /* Portfolio Section Styling */
     .portfolio {
-      margin-top: 100px;
-      /* Adjust as needed */
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      /* Responsive columns */
-      gap: 30px;
+      margin-top: 200px;
+      /* Adjust spacing as needed */
     }
 
     .portfolio-item {
+      /* Removed grid styles */
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
-      /* Add rounded corners if desired */
     }
 
     .portfolio-item img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.3s ease;
     }
 
-    .portfolio-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .portfolio-item .portfolio-content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    .portfolio-content {
+      /* Removed hover effects and transitions */
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.7);
       color: white;
-      opacity: 0;
-      transform: translateY(100%);
-      transition: all 0.3s ease;
-    }
-
-    .portfolio-item:hover .portfolio-content {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .portfolio-item h3 {
@@ -297,7 +273,6 @@
     </div>
     <p class="p1">I specialize in mobile and web products</p>
     <a href="#portfolio" class="button">
-      {/* Added #portfolio to the href for smooth scrolling */}
       Learn More
       <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -315,25 +290,13 @@
 
   <section id="portfolio" class="portfolio">
     <div class="container">
-      <h2>Portfolio</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="project1.jpg" alt="Project 1">
-          <div class="portfolio-content">
-            <h3>Project 1</h3>
-            <p>A short description of project 1.</p>
-            <a href="#">View Project</a>
-          </div>
+      <div class="portfolio-item">
+        <img src="project1.jpg" alt="Project 1">
+        <div class="portfolio-content">
+          <h3>Project 1</h3>
+          <p>A short description of project 1. You can add more details about the project here, such as the technologies used, the challenges faced, and the results achieved.</p>
+          <a href="#">View Project</a>
         </div>
-        <div class="portfolio-item">
-          <img src="project2.jpg" alt="Project 2">
-          <div class="portfolio-content">
-            <h3>Project 2</h3>
-            <p>A short description of project 2.</p>
-            <a href="#">View Project</a>
-          </div>
-        </div>
-        {/* Add more portfolio items as needed */}
       </div>
     </div>
   </section>
