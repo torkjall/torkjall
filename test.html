@@ -8,36 +8,31 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
+    /* Body styling */
     body {
       margin: 0;
       font-family: 'Silka', sans-serif;
       background-color: #171715;
       color: #FFFFFF;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       justify-content: flex-start;
-      height: 100%;
+      align-items: center;
+      height: 100vh;
       padding: 0;
-      overflow-x: hidden;
+      overflow: hidden;
+      position: relative;
     }
 
+    /* Container */
     .container {
-      width: 100%;
-      padding-left: 64px;
-      padding-top: 150px;
-      box-sizing: border-box;
+      margin-left: 64px;
     }
 
-    /* Typed text */
+    /* Typed text styling */
     .typed-wrapper {
       height: 90px;
       position: relative;
       margin-bottom: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
     }
 
     .typed-words {
@@ -53,10 +48,12 @@
       z-index: 1;
     }
 
+    /* Highlight text (e.g. Tor, designer, expert) */
     .highlight {
       color: #FFEB6E;
     }
 
+    /* Paragraph text styling */
     .p1 {
       font-size: 2.25rem;
       margin: 0 0 16px 0;
@@ -64,13 +61,14 @@
       letter-spacing: -0.5px;
     }
 
+    /* Button styling */
     .button {
       padding: 16px 32px;
       font-size: 1.125rem;
       font-weight: 600;
       color: #FFFFFF;
       background-color: #171715;
-      text-transform: none;
+      text-transform: uppercase;
       letter-spacing: 1px;
       text-align: center;
       text-decoration: none;
@@ -98,99 +96,7 @@
       transform: rotate(0deg);
     }
 
-    .down-arrow {
-      position: absolute;
-      bottom: 140px;
-      left: 50%;
-      transform: translateX(-50%) rotate(90deg);
-      opacity: 0;
-      animation: fadeIn 1s ease 3s forwards;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
-
-    .down-arrow:hover {
-      color: #FFEB6E;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Portfolio Section */
-    .portfolio-section {
-      margin-top: 204px; /* 64px space between the arrow and the portfolio section */
-      padding: 50px 20px;
-      background-color: #171715;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto; /* Center the portfolio section */
-      box-sizing: border-box;
-    }
-
-    .portfolio-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      text-align: left;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .portfolio-item {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background-color: #171715;
-      width: 100%;
-      max-width: 1000px;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 8px;
-      box-sizing: border-box;
-    }
-
-    .portfolio-item img {
-      width: 80%; /* Reduced image size by 20% */
-      height: auto;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .portfolio-item .content {
-      width: 60%;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .portfolio-item h3 {
-      font-size: 1.25rem;
-      margin-top: 16px;
-      color: #FFEB6E;
-    }
-
-    .portfolio-item p {
-      color: #BBBBBB;
-      font-size: 1rem;
-    }
-
-    .portfolio-item a {
-      display: inline-block;
-      margin-top: 16px;
-      color: #FFEB6E;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Cursor Styling */
+    /* Cursor styling */
     .typed-cursor {
       font-size: 100px;
       color: #FFFFFF;
@@ -203,62 +109,127 @@
       margin-left: 2px;
     }
 
+    /* Blinking effect for cursor */
     @keyframes blink {
       50% {
         opacity: 0;
       }
     }
 
-    /* Responsive Design for smaller screens */
-    @media (max-width: 1024px) {
+    /* Downward arrow styling */
+    .down-arrow {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+      opacity: 0;
+      animation: fadeIn 1s ease 3s forwards;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Portfolio section */
+    .portfolio-section {
+      margin-top: 204px; /* 64px gap from arrow */
+      text-align: center;
+    }
+
+    .portfolio-item {
+      width: 80%; /* Reduced image size */
+      margin: 0 auto;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      body {
+        padding: 0 32px;
+      }
+
       .container {
-        padding-left: 30px;
+        margin-left: 0;
+      }
+
+      .typed-wrapper {
+        height: 62px;
       }
 
       .typed-words {
         font-size: 60px;
+        line-height: 62px;
       }
 
-      .portfolio-item {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .portfolio-item img {
-        width: 35%;
-      }
-    }
-
-    /* Mobile view */
-    @media (max-width: 768px) {
-      .portfolio-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .portfolio-item img {
-        width: 60%;
-        margin-bottom: 20px;
-      }
-
-      .portfolio-item .content {
-        width: 100%;
-        padding-left: 0;
-        text-align: center;
-      }
-
-      .typed-words {
-        font-size: 50px;
+      .typed-cursor {
+        font-size: 70px;
+        height: 100%;
+        line-height: 100%;
       }
 
       .p1 {
         font-size: 1.5rem;
+        text-align: left;
       }
 
       .button {
+        margin-left: 0;
+        margin-right: -15px;
         font-size: 1rem;
+        padding: 12px 24px;
+      }
+
+      .arrow-icon {
+        width: 15px;
+        height: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 0 32px;
+      }
+
+      .container {
+        margin-left: 0;
+      }
+
+      .typed-wrapper {
+        height: 50px;
+      }
+
+      .typed-words {
+        font-size: 48px;
+        line-height: 50px;
+      }
+
+      .typed-cursor {
+        font-size: 55px;
+        height: 100%;
+        line-height: 100%;
+      }
+
+      .p1 {
+        font-size: 1.25rem;
+        text-align: left;
+      }
+
+      .button {
+        margin-left: 0;
+        margin-right: -10px;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .arrow-icon {
+        width: 12px;
+        height: 10px;
       }
     }
   </style>
@@ -270,7 +241,22 @@
       <div class="typed-words"></div>
     </div>
     <p class="p1">I specialize in mobile and web products</p>
-    <a href="#" class="button" id="scrollButton">
+    <a href="#" class="button">
+      Learn More
+      <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
+          fill="currentColor"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="portfolio-section">
+    <div class="portfolio-item">
+      <img src="https://via.placeholder.com/600x400" alt="Portfolio Image" width="100%">
+    </div>
+    <a href="#" class="button">
       Learn More
       <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -286,49 +272,26 @@
       fill="currentColor"></path>
   </svg>
 
-  <!-- Portfolio Section -->
-  <div class="portfolio-section" id="portfolioSection">
-    <div class="portfolio-container">
-      <div class="portfolio-item">
-        <div class="content">
-          <h3>Favourites feature</h3>
-          <p>In this project I designed the Favourites feature for a sports betting app, which allows the user to favourite events, leagues, and sports. This gives the user quick access to a page where all of their favourite items are stored.</p>
-          <a href="https://www.example.com" class="button" target="_blank">
-            GO TO PROJECT
-            <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
-                fill="currentColor"></path>
-            </svg>
-          </a>
-        </div>
-        <img src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965"
-          alt="Project 1 Image">
-      </div>
-      <!-- Learn More Button Inside Portfolio Section -->
-      <div style="width: 100%; text-align: center;">
-        <a href="#" class="button" id="learnMoreButton">
-          Learn More
-          <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
-              fill="currentColor"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Initialize Typed.js for typed text effect
-    var options = {
-      strings: ["Hi, I'm Tor.", "I'm a Designer.", "I'm a Web Developer.", "I'm an Expert."],
-      typeSpeed: 60,
-      backSpeed: 60,
-      loop: true
-    };
-
-    var typed = new Typed(".typed-words", options);
+    var typed = new Typed(".typed-words", {
+      strings: [
+        "I'm <span class='highlight'>Tor</span>",
+        "I'm a <span class='highlight'>designer</span>",
+        "I'm an <span class='highlight'>expert</span>"
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1500,
+      startDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+      attr: null,
+      onTypingPaused: function () {
+        const cursor = document.querySelector('.typed-cursor');
+        cursor.style.opacity = 1;
+      },
+    });
   </script>
 </body>
 
