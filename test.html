@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Tor Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
-
   <style>
     /* Body styling */
     body {
@@ -30,6 +28,11 @@
     }
 
     /* Typed text styling */
+    .typed-wrapper {
+      min-height: 88px;
+      position: relative;
+    }
+
     .typed-words {
       font-size: 88px;
       font-weight: 500;
@@ -40,8 +43,7 @@
       letter-spacing: -0.5px;
       position: relative;
       margin-right: 0;
-      z-index: 1; /* Ensures the text is above the cursor */
-      min-height: 88px; /* Keeps space for the cursor */
+      z-index: 1;
     }
 
     /* Highlight text (e.g. Tor, designer, expert) */
@@ -81,16 +83,16 @@
 
     /* Cursor styling */
     .typed-cursor {
-      font-size: 88px; /* Match text size */
+      font-size: 88px;
       color: #FFFFFF;
       font-weight: 500;
       position: absolute;
       animation: blink 0.8s step-end infinite;
-      line-height: 88px; /* Same as text */
-      height: 88px; /* Ensures alignment */
+      line-height: 88px;
+      height: 88px;
       display: inline-block;
-      vertical-align: baseline; /* Align cursor with text */
-      margin-left: 2px; /* Add a small space between text and cursor. */
+      vertical-align: baseline;
+      margin-left: 2px;
     }
 
     /* Blinking effect for cursor */
@@ -106,9 +108,12 @@
         margin-left: 20px;
       }
 
+      .typed-wrapper {
+        min-height: 60px;
+      }
+
       .typed-words {
         font-size: 60px;
-        min-height: 60px;
         line-height: 60px;
       }
 
@@ -124,9 +129,16 @@
     }
 
     @media (max-width: 480px) {
+      .container {
+        margin-left: 20px;
+      }
+
+      .typed-wrapper {
+        min-height: 48px;
+      }
+
       .typed-words {
         font-size: 48px;
-        min-height: 48px;
         line-height: 48px;
       }
 
@@ -144,11 +156,12 @@
 </head>
 <body>
   <div class="container">
-    <div class="typed-words"></div>
+    <div class="typed-wrapper">
+      <div class="typed-words"></div>
+    </div>
     <p class="p1">I specialize in mobile and web products</p>
     <a href="#" class="button">Learn More</a>
   </div>
-
   <script>
     var typed = new Typed(".typed-words", {
       strings: [
@@ -161,11 +174,10 @@
       backDelay: 1500,
       startDelay: 1500,
       loop: true,
-      showCursor: true,  // Ensure cursor is visible
-      cursorChar: "|",   // Cursor character (the vertical bar)
+      showCursor: true,
+      cursorChar: "|",
       attr: null,
       onTypingPaused: function() {
-        // Fix the cursor behavior during typing pause.
         const cursor = document.querySelector('.typed-cursor');
         cursor.style.opacity = 1;
       },
