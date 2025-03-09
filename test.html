@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Tor Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- Google Fonts for Silka -->
@@ -40,7 +40,7 @@
       line-height: 88px;
       letter-spacing: -0.5px;
       position: relative;
-      margin-right: 10px;
+      margin-right: 0;
       z-index: 1; /* Ensures the text is above the cursor */
     }
 
@@ -81,13 +81,14 @@
 
     /* Cursor styling */
     .typed-cursor {
-      font-size: 88px;
+      font-size: 100px; /* Increased cursor size */
       color: #FFFFFF;
       font-weight: 500;
       position: absolute;
       animation: blink 0.8s step-end infinite;
       top: 0;
-      margin-left: 8px; /* Space between cursor and text */
+      left: 100%; /* Ensure the cursor is placed right after the text */
+      margin-left: 5px; /* Reduce space between cursor and text */
     }
 
     /* Blinking effect for cursor */
@@ -146,7 +147,6 @@
       cursorChar: "|",   // Cursor character (the vertical bar)
       attr: null,
       onTypingPaused: function() {
-        // Fix the cursor behavior during typing pause.
         const cursor = document.querySelector('.typed-cursor');
         cursor.style.opacity = 1;
       },
