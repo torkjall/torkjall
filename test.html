@@ -20,7 +20,7 @@
       justify-content: flex-start;
       height: 100%;
       padding: 0;
-      overflow: auto;
+      overflow-x: hidden;
     }
 
     /* Container */
@@ -151,14 +151,14 @@
     }
 
     .portfolio-item img {
-      width: 15%;
+      width: 18%; /* Adjusted width for the image */
       height: auto;
       object-fit: cover;
       border-radius: 8px;
     }
 
     .portfolio-item .content {
-      width: 50%;
+      width: 60%; /* Text section */
       padding-left: 20px;
     }
 
@@ -204,26 +204,19 @@
     /* Responsive Design for smaller screens */
     @media (max-width: 768px) {
       .portfolio-item {
-        flex-direction: column; /* Stacks the image on top of the text */
-        align-items: center; /* Center the items */
-        padding: 10px;
+        flex-direction: column; /* Stack text and image on top of each other */
+        align-items: center;
       }
 
       .portfolio-item img {
-        width: 15%; /* Keep the image the same size as on larger screens */
-        margin-bottom: 20px; /* Reduce space between image and text */
+        width: 40%; /* Reduced image size on smaller screens */
+        margin-bottom: 20px; /* Added space between image and text */
       }
 
       .portfolio-item .content {
         width: 100%;
-        padding-left: 0;
-        text-align: center; /* Center the text on smaller screens */
+        text-align: center; /* Center text for smaller screens */
       }
-    }
-
-    /* Prevent Horizontal Scroll */
-    html, body {
-      overflow-x: hidden;
     }
 
   </style>
