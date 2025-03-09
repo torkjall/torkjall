@@ -32,30 +32,23 @@
 
     /* Typed text styling */
     .typed-words {
-  font-size: 88px;
-  font-weight: 500;
-  white-space: nowrap;
-  color: #FFFFFF;
-  display: inline-block;
-  line-height: 88px;
-  letter-spacing: -0.5px;
-  min-height: 88px; /* Prevents page jumping */
-  min-width: 1ch; /* Ensures space for cursor even when text is empty */
-}
+      font-size: 88px;
+      font-weight: 500;
+      white-space: nowrap;
+      color: #FFFFFF;
+      display: inline-block;
+      line-height: 88px;
+      letter-spacing: -0.5px;
+      min-height: 88px; /* Ensures the row height stays fixed */
+      min-width: 1ch; /* Prevents cursor from shrinking */
+      visibility: hidden; /* Hides empty space but keeps size */
+    }
 
-.typed-words {
-  font-size: 88px;
-  font-weight: 500;
-  white-space: nowrap;
-  color: #FFFFFF;
-  display: inline-block;
-  line-height: 88px;
-  letter-spacing: -0.5px;
-  min-height: 88px; /* Ensures the row height stays fixed */
-  min-width: 0.1ch; /* Keeps cursor at the start */
-}
-
-
+    /* Keeps space for cursor when text is erased */
+    .typed-words::after {
+      content: " "; /* Invisible placeholder */
+      visibility: visible; /* Ensures cursor stays in place */
+    }
 
     /* Highlight text (e.g. Tor, designer, expert) */
     .highlight {
@@ -93,20 +86,17 @@
     }
 
     /* Cursor styling */
-    .typed-words {
-  font-size: 88px;
-  font-weight: 500;
-  white-space: nowrap;
-  color: #FFFFFF;
-  display: inline-block;
-  line-height: 88px;
-  letter-spacing: -0.5px;
-  min-height: 88px; /* Ensures the row height stays fixed */
-}
-
-
-
-
+    .typed-cursor {
+      font-size: 108px; /* Bigger cursor */
+      color: #FFFFFF;
+      font-weight: 500;
+      position: absolute;
+      animation: blink 0.8s step-end infinite;
+      line-height: 88px; /* Aligns with text */
+      height: 88px;
+      display: inline-block;
+      vertical-align: baseline;
+    }
 
     /* Blinking effect for cursor */
     @keyframes blink {
