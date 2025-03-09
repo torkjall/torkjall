@@ -147,11 +147,12 @@
       margin-bottom: 30px;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      /* Removed shadow and hover effect */
     }
 
     .portfolio-item img {
-      width: 45%; /* Reduced image size */
+      width: 31.5%; /* Reduced image size by 30% (from 45% to 31.5%) */
       height: auto;
       object-fit: cover;
       border-radius: 8px;
@@ -179,10 +180,6 @@
       color: #FFEB6E;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    .portfolio-item:hover {
-      transform: scale(1.05);
     }
 
     /* Cursor styling */
