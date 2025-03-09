@@ -40,6 +40,7 @@
       line-height: 88px;
       letter-spacing: -0.5px;
       position: relative;
+      margin-right: 0;  /* Removed right margin */
       z-index: 1; /* Ensures the text is above the cursor */
     }
 
@@ -86,8 +87,7 @@
       position: absolute;
       animation: blink 0.8s step-end infinite;
       top: 0;
-      left: 100%; /* Ensure the cursor is placed right after the text */
-      margin-left: 5px; /* Reduced space between cursor and text */
+      margin-left: 0; /* Removed space between cursor and text */
     }
 
     /* Blinking effect for cursor */
@@ -146,6 +146,7 @@
       cursorChar: "|",   // Cursor character (the vertical bar)
       attr: null,
       onTypingPaused: function() {
+        // Fix the cursor behavior during typing pause.
         const cursor = document.querySelector('.typed-cursor');
         cursor.style.opacity = 1;
       },
