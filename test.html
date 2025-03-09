@@ -29,13 +29,17 @@
       text-align: left; /* Align text to the left */
       margin-left: 64px; /* Left margin closer to the left side */
       padding: 20px; /* Padding around the text */
+      width: 100%;
+      max-width: 800px; /* Limit the container width */
     }
 
-    /* Styling for the typed words */
+    /* Prevent text from jumping when erased */
     .typed-words {
       font-size: 88px; /* Much larger font size for typed text */
       font-weight: 500; /* Medium weight */
       padding-bottom: 10px; /* Space between typed words and paragraph */
+      white-space: nowrap; /* Prevent text wrapping */
+      overflow: hidden; /* Hide overflow of text */
     }
 
     /* Styling for the paragraph */
@@ -56,8 +60,8 @@
       padding: 16px 32px;
       font-size: 1.125rem;
       font-weight: 500;
-      color: #FFFFFF;
-      background-color: #FFEB6E;
+      color: #FFEB6E;
+      background-color: transparent;
       border: 2px solid #FFEB6E;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -69,9 +73,8 @@
     }
 
     .button:hover {
-      background-color: transparent;
-      color: #FFEB6E;
-      border-color: #FFEB6E;
+      background-color: #FFEB6E;
+      color: #171715; /* Change text color to dark on hover */
     }
 
     /* Responsive styling for smaller screens */
