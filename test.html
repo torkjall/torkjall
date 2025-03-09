@@ -8,7 +8,6 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* Body styling */
     body {
       margin: 0;
       font-family: 'Silka', sans-serif;
@@ -23,7 +22,6 @@
       overflow-x: hidden;
     }
 
-    /* Container */
     .container {
       width: 100%;
       padding-left: 64px;
@@ -31,7 +29,7 @@
       box-sizing: border-box;
     }
 
-    /* Typed text styling */
+    /* Typed text */
     .typed-wrapper {
       height: 90px;
       position: relative;
@@ -55,12 +53,10 @@
       z-index: 1;
     }
 
-    /* Highlight text (e.g. Tor, designer, expert) */
     .highlight {
       color: #FFEB6E;
     }
 
-    /* Paragraph text styling */
     .p1 {
       font-size: 2.25rem;
       margin: 0 0 16px 0;
@@ -68,14 +64,13 @@
       letter-spacing: -0.5px;
     }
 
-    /* Button styling */
     .button {
       padding: 16px 32px;
       font-size: 1.125rem;
       font-weight: 600;
       color: #FFFFFF;
       background-color: #171715;
-      text-transform: none; /* Removed uppercase */
+      text-transform: none;
       letter-spacing: 1px;
       text-align: center;
       text-decoration: none;
@@ -103,7 +98,6 @@
       transform: rotate(0deg);
     }
 
-    /* Downward arrow styling */
     .down-arrow {
       position: absolute;
       bottom: 140px;
@@ -119,7 +113,6 @@
       color: #FFEB6E;
     }
 
-    /* Fade in animation */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -132,12 +125,12 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 204px; /* Ensuring 64px space between arrow and section */
+      margin-top: 204px; /* 64px space between the arrow and the portfolio section */
       padding: 50px 20px;
       background-color: #171715;
       width: 100%;
       max-width: 1200px;
-      margin: 0 auto; /* Centered the section */
+      margin: 0 auto; /* Center the portfolio section */
       box-sizing: border-box;
     }
 
@@ -197,7 +190,7 @@
       font-weight: bold;
     }
 
-    /* Cursor styling */
+    /* Cursor Styling */
     .typed-cursor {
       font-size: 100px;
       color: #FFFFFF;
@@ -210,7 +203,6 @@
       margin-left: 2px;
     }
 
-    /* Blinking effect for cursor */
     @keyframes blink {
       50% {
         opacity: 0;
@@ -238,7 +230,7 @@
       }
     }
 
-    /* Mobile view for portfolio (smaller than 768px) */
+    /* Mobile view */
     @media (max-width: 768px) {
       .portfolio-item {
         flex-direction: column;
@@ -297,7 +289,6 @@
   <!-- Portfolio Section -->
   <div class="portfolio-section" id="portfolioSection">
     <div class="portfolio-container">
-      <!-- Project 1 -->
       <div class="portfolio-item">
         <div class="content">
           <h3>Favourites feature</h3>
