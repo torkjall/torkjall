@@ -15,25 +15,25 @@
       background-color: #171715;
       color: #FFFFFF;
       display: flex;
-      flex-direction: column; /* Ensures vertical stacking of content */
+      flex-direction: column;
       justify-content: flex-start;
-      align-items: flex-start; /* Align content to the left */
+      align-items: flex-start;
       padding: 0;
-      overflow-x: hidden; /* Prevent horizontal scrolling */
+      overflow-x: hidden;
       position: relative;
-      min-height: 100vh; /* Ensure full page height */
+      min-height: 100vh;
       box-sizing: border-box;
     }
 
     /* Container */
     .container {
       margin-left: 64px;
-      padding-top: 100px; /* Adds space from the top */
-      text-align: left; /* Left-align text */
+      padding-top: 100px;
+      text-align: left;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Ensure left-aligned content */
-      width: 100%; /* Take up full width */
+      align-items: flex-start;
+      width: 100%;
     }
 
     /* Typed text styling */
@@ -130,7 +130,7 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
-      opacity: 0;
+      opacity: 1; /* Make sure it's visible */
       animation: fadeIn 1s ease 3s forwards;
     }
 
@@ -147,13 +147,13 @@
 
     /* New Project Section */
     .project-section {
-      width: 100%; /* Ensure full width */
+      width: 100%;
       padding: 100px 0;
       display: flex;
-      flex-direction: row; /* Stack the content horizontally */
-      align-items: center; /* Center align the content */
-      justify-content: space-around; /* Distribute the content */
-      margin-top: 100px; /* Space from the arrow */
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 120px; /* Adjusted to 120px for extra space */
     }
 
     .project-text {
@@ -176,7 +176,7 @@
     }
 
     .project-image img {
-      width: 60%; /* Adjust image width to fit better on screen */
+      width: 60%;
       max-width: 600px;
       height: auto;
       border-radius: 10px;
@@ -314,7 +314,7 @@
       fill="currentColor"></path>
   </svg>
 
-  <!-- New Project Section (placed below everything with 100px gap from the arrow) -->
+  <!-- New Project Section (placed below everything with extra 20px gap) -->
   <div class="project-section">
     <div class="project-text">
       <h2>My First Project</h2>
