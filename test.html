@@ -126,14 +126,15 @@
 
     /* Downward arrow styling */
     .down-arrow {
-      position: absolute;
-      bottom: 0;
+      position: fixed;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
-      opacity: 1; /* Make sure it's visible */
+      opacity: 1;
       animation: fadeIn 1s ease 3s forwards;
       cursor: pointer;
       transition: color 0.3s ease;
+      z-index: 1000;
     }
 
     /* Fade in animation */
