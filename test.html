@@ -161,6 +161,9 @@
     .portfolio-item .content {
       width: 60%; /* Text section */
       padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center text vertically */
     }
 
     .portfolio-item h3 {
@@ -215,6 +218,7 @@
       .portfolio-item {
         flex-direction: row; /* Keep the image on the right and text on the left on medium screens */
         justify-content: space-between;
+        align-items: center;
       }
 
       .portfolio-item img {
