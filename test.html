@@ -43,7 +43,7 @@
       letter-spacing: -0.5px;
       position: relative;
       margin-right: 0;
-      z-index: 1;
+      z-index: 1; /* Add z-index back */
     }
 
     /* Highlight text (e.g. Tor, designer, expert) */
@@ -201,7 +201,25 @@
     </a>
   </div>
   <script>
-    // ... (your Typed.js script) ...
+    var typed = new Typed(".typed-words", {
+      strings: [
+        "I'm <span class='highlight'>Tor</span>",
+        "I'm a <span class='highlight'>designer</span>",
+        "I'm an <span class='highlight'>expert</span>"
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1500,
+      startDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+      attr: null,
+      onTypingPaused: function() {
+        const cursor = document.querySelector('.typed-cursor');
+        cursor.style.opacity = 1;
+      },
+    });
   </script>
 </body>
 </html>
