@@ -208,4 +208,33 @@
         <div class="content">
           <h3>Project 1: Design System</h3>
           <p>This design system is built to ensure consistency and improve the efficiency of building UI components for large-scale applications.</p>
-          <a href="https://www.example.com
+          <a href="https://www.example.com" target="_blank">View Full Case Study →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var typed = new Typed(".typed-words", {
+      strings: [
+        "I'm <span class='highlight'>Tor</span>",
+        "I'm a <span class='highlight'>designer</span>",
+        "I'm an <span class='highlight'>expert</span>"
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1500,
+      startDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+      attr: null,
+      onTypingPaused: function () {
+        const cursor = document.querySelector('.typed-cursor');
+        cursor.style.opacity = 1;
+      },
+    });
+  </script>
+</body>
+
+</html>
