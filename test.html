@@ -28,6 +28,7 @@
     /* Container */
     .container {
       margin-left: 64px;
+      margin-right: 64px; /* Added margin to the right */
       padding-top: 100px;
       text-align: left;
       display: flex;
@@ -171,8 +172,8 @@
     }
 
     .project-image img {
-      width: 60%;
-      max-width: 600px;
+      width: 50%; /* Reduced size */
+      max-width: 500px; /* Limit max size */
       height: auto;
       border-radius: 10px;
     }
@@ -203,6 +204,7 @@
 
       .container {
         margin-left: 0;
+        margin-right: 0;
       }
 
       .typed-wrapper {
@@ -256,6 +258,7 @@
 
       .container {
         margin-left: 0;
+        margin-right: 0;
       }
 
       .typed-wrapper {
@@ -354,9 +357,9 @@
         "I'm a <span class='highlight'>designer</span>",
         "I'm an <span class='highlight'>expert</span>"
       ],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1500,
+      typeSpeed: 80,
+      backSpeed: 50,
+      backDelay: 1000,
       startDelay: 500,
       loop: true,
       showCursor: true,
