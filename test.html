@@ -25,9 +25,10 @@
 
     /* Container */
     .container {
-      margin-left: 64px;
-      margin-top: 150px;
       width: 100%;
+      padding-left: 64px;
+      padding-top: 150px;
+      box-sizing: border-box;
     }
 
     /* Typed text styling */
@@ -151,7 +152,7 @@
     }
 
     .portfolio-item img {
-      width: 18%; /* Adjusted width for the image */
+      width: 25%; /* Reduced width for the image */
       height: auto;
       object-fit: cover;
       border-radius: 8px;
@@ -202,23 +203,56 @@
     }
 
     /* Responsive Design for smaller screens */
+    @media (max-width: 1024px) {
+      .container {
+        padding-left: 30px;
+      }
+
+      .typed-words {
+        font-size: 60px;
+      }
+
+      .portfolio-item {
+        flex-direction: row; /* Keep the image on the right and text on the left on medium screens */
+        justify-content: space-between;
+      }
+
+      .portfolio-item img {
+        width: 35%; /* Slightly increased width for medium screens */
+      }
+    }
+
+    /* Mobile view for portfolio (smaller than 768px) */
     @media (max-width: 768px) {
       .portfolio-item {
         flex-direction: column; /* Stack text and image on top of each other */
         align-items: center;
+        text-align: center; /* Center text for smaller screens */
       }
 
       .portfolio-item img {
-        width: 40%; /* Reduced image size on smaller screens */
+        width: 60%; /* Reduced image size on smaller screens */
         margin-bottom: 20px; /* Added space between image and text */
       }
 
       .portfolio-item .content {
         width: 100%;
+        padding-left: 0;
         text-align: center; /* Center text for smaller screens */
       }
-    }
 
+      .typed-words {
+        font-size: 50px; /* Adjusted font size for mobile */
+      }
+
+      .p1 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+      }
+
+      .button {
+        font-size: 1rem; /* Smaller button text for mobile */
+      }
+    }
   </style>
 </head>
 
