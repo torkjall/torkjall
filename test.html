@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Tor Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  
+
   <!-- Google Fonts for Roboto and Silka -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   
@@ -33,7 +33,7 @@
       max-width: 800px;
     }
 
-    /* Typed text */
+    /* Prevent text from jumping when erased */
     .typed-words {
       font-size: 88px;
       font-weight: 500;
@@ -41,8 +41,8 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      min-height: 88px; /* Keep height consistent */
-      line-height: 88px; /* Ensure cursor aligns with text */
+      min-height: 88px; /* Keep height consistent for the text */
+      line-height: 88px; /* Ensures alignment with the cursor */
     }
 
     /* Highlight style for the words Tor, designer, expert */
@@ -86,7 +86,7 @@
       font-size: 88px;
       font-weight: 500;
       line-height: 88px;
-      vertical-align: bottom;  /* Ensure the cursor aligns with the text baseline */
+      vertical-align: bottom;  /* Align cursor with baseline */
       animation: blink 0.8s step-end infinite;
     }
 
