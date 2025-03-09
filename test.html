@@ -36,6 +36,10 @@
       height: 90px;
       position: relative;
       margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .typed-words {
@@ -128,7 +132,7 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 204px; /* Adjusted to move the portfolio section 64px below the arrow */
+      margin-top: 204px; /* Ensuring 64px space between arrow and section */
       padding: 50px 20px;
       background-color: #171715;
       width: 100%;
@@ -323,5 +327,18 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Initialize Typed.js for typed text effect
+    var options = {
+      strings: ["Hi, I'm Tor.", "I'm a Designer.", "I'm a Web Developer.", "I'm an Expert."],
+      typeSpeed: 60,
+      backSpeed: 60,
+      loop: true
+    };
+
+    var typed = new Typed(".typed-words", options);
+  </script>
 </body>
+
 </html>
