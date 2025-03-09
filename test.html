@@ -87,6 +87,8 @@
       margin-left: 10px;
       transition: transform 0.3s ease;
       transform: rotate(-45deg); /* Initial 45-degree counter-clockwise rotation */
+      width: 18px; /* Initial width of the icon */
+      height: 16px; /* Initial height of the icon */
     }
 
     .button:hover .arrow-icon {
@@ -140,6 +142,12 @@
 
       .button {
         margin-left: -15px; /* Adjust for smaller screen */
+        font-size: 1rem; /* Adjust font size for smaller screen */
+      }
+
+      .arrow-icon {
+        width: 15px; /* Adjust icon size for smaller screen */
+        height: 13px; /* Adjust icon size for smaller screen */
       }
     }
 
@@ -169,6 +177,12 @@
 
       .button {
         margin-left: -10px; /* Adjust for smaller screen */
+        font-size: 0.9rem; /* Adjust font size for smaller screen */
+      }
+
+      .arrow-icon {
+        width: 12px; /* Adjust icon size for smaller screen */
+        height: 10px; /* Adjust icon size for smaller screen */
       }
     }
   </style>
@@ -187,25 +201,7 @@
     </a>
   </div>
   <script>
-    var typed = new Typed(".typed-words", {
-      strings: [
-        "I'm <span class='highlight'>Tor</span>",
-        "I'm a <span class='highlight'>designer</span>",
-        "I'm an <span class='highlight'>expert</span>"
-      ],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1500,
-      startDelay: 1500,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|",
-      attr: null,
-      onTypingPaused: function() {
-        const cursor = document.querySelector('.typed-cursor');
-        cursor.style.opacity = 1;
-      },
-    });
+    // ... (your Typed.js script) ...
   </script>
 </body>
 </html>
