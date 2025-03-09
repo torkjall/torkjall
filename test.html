@@ -133,6 +133,7 @@
       opacity: 1;
       transition: color 0.3s ease;
       z-index: 1000;
+      cursor: pointer; /* Change cursor to pointer */
     }
 
     .down-arrow:hover {
@@ -341,7 +342,7 @@
       </a>
     </div>
     <div class="project-image">
-      <img src="https://via.placeholder.com/400" alt="Project Image">
+      <img src="https://via.placeholder.com/600x400" alt="Project Image">
     </div>
   </div>
 
@@ -366,14 +367,9 @@
       },
     });
 
-    // Scroll to portfolio section on arrow click
-    const downArrow = document.querySelector('.down-arrow');
-    const portfolioSection = document.getElementById('portfolio');
-
-    downArrow.addEventListener('click', function () {
-      portfolioSection.scrollIntoView({
-        behavior: 'smooth'
-      });
+    // Scroll to portfolio section
+    document.querySelector('.down-arrow').addEventListener('click', () => {
+      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
     });
   </script>
 </body>
