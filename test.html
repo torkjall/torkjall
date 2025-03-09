@@ -41,8 +41,8 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      min-height: 88px;
-      line-height: 88px; /* Ensures alignment with the cursor */
+      min-height: 88px; /* Keep height consistent for the text */
+      line-height: 88px; /* Ensure text and cursor align */
     }
 
     /* Styling for the paragraph */
@@ -82,11 +82,11 @@
 
     /* Cursor animation */
     .typed-cursor {
-      color: #FFFFFF !important;
+      color: #FFFFFF !important;  /* Set cursor color */
       font-size: 88px;
       font-weight: 500;
       line-height: 88px;
-      vertical-align: bottom; /* Ensures cursor aligns properly */
+      vertical-align: middle;  /* Align cursor to middle of text */
       animation: blink 0.8s step-end infinite;
     }
 
