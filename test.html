@@ -128,7 +128,7 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 204px; /* 140px + 64px down from the arrow */
+      margin-top: 204px; /* Adjusted to move the portfolio section 64px below the arrow */
       padding: 50px 20px;
       background-color: #171715;
       width: 100%;
@@ -323,36 +323,5 @@
       </div>
     </div>
   </div>
-
-  <script>
-    var typed = new Typed(".typed-words", {
-      strings: [
-        "I'm <span class='highlight'>Tor</span>",
-        "I'm a <span class='highlight'>designer</span>",
-        "I'm an <span class='highlight'>expert</span>"
-      ],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1500,
-      startDelay: 1500,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|"
-    });
-
-    document.getElementById("scrollButton").addEventListener("click", function () {
-      document.getElementById("portfolioSection").scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-
-    document.getElementById("learnMoreButton").addEventListener("click", function () {
-      document.getElementById("portfolioSection").scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  </script>
-
 </body>
-
 </html>
