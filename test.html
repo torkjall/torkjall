@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Portfolio</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* General styling */
     body {
       margin: 0;
       font-family: 'Silka', sans-serif;
@@ -18,123 +16,89 @@
       flex-direction: column;
       align-items: center;
       height: 100vh;
+      padding: 0;
       overflow-x: hidden;
-      scroll-behavior: smooth;
     }
-
-    /* Hero Section */
     .container {
-      margin-top: 20vh;
       text-align: center;
+      margin-top: 20vh;
     }
-
-    .typed-wrapper {
-      height: 90px;
-    }
-
     .typed-words {
       font-size: 88px;
       font-weight: 600;
-      white-space: nowrap;
+      color: #FFFFFF;
+      display: inline-block;
     }
-
     .highlight {
       color: #FFEB6E;
     }
-
     .p1 {
       font-size: 2.25rem;
       font-weight: 500;
     }
-
-    .button {
-      padding: 16px 32px;
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: #FFFFFF;
-      background-color: #171715;
-      text-transform: uppercase;
-      border-radius: 60px;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .arrow-icon {
-      margin-left: 10px;
-      transition: transform 0.3s ease;
-      transform: rotate(-45deg);
-      width: 18px;
-      height: 16px;
-    }
-
-    .button:hover .arrow-icon {
-      transform: rotate(0deg);
-    }
-
-    /* Downward Arrow */
     .down-arrow {
-      position: absolute;
-      bottom: 32px;
-      left: 50%;
-      transform: translateX(-50%) rotate(90deg);
+      margin-top: 50px;
       cursor: pointer;
-      opacity: 1;
-      animation: fadeIn 1s ease 3s forwards;
+      animation: bounce 2s infinite;
     }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
       }
-
-      to {
-        opacity: 1;
+      50% {
+        transform: translateY(10px);
       }
     }
-
-    /* Portfolio Section */
     .portfolio {
-      margin-top: 100px;
-      width: 80%;
-      max-width: 1000px;
+      width: 100%;
       text-align: center;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      padding: 50px 20px;
+      display: none;
     }
-
-    .portfolio.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .portfolio h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
     .project {
       background: #222;
       padding: 20px;
-      border-radius: 12px;
-      width: 300px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="typed-words"></div>
+    <p class="p1">I specialize in mobile and web products</p>
+    <svg class="down-arrow" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5v14m0 0l-6-6m6 6l6-6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 
-    .project:hover {
-      transform: translateY(-5px);
-    }
+  <div class="portfolio" id="portfolio">
+    <h2>Portfolio Projects</h2>
+    <div class="project">Project 1: Web App</div>
+    <div class="project">Project 2: Mobile App</div>
+    <div class="project">Project 3: UX/UI Design</div>
+  </div>
 
-    .project img {
-      width: 100%;
-      border-radius: 8
+  <script>
+    var typed = new Typed(".typed-words", {
+      strings: [
+        "I'm <span class='highlight'>Tor</span>",
+        "I'm a <span class='highlight'>designer</span>",
+        "I'm an <span class='highlight'>expert</span>"
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1500,
+      startDelay: 1500,
+      loop: true
+    });
+
+    document.querySelector(".down-arrow").addEventListener("click", function() {
+      document.getElementById("portfolio").style.display = "block";
+      window.scrollTo({ top: document.getElementById("portfolio").offsetTop, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
