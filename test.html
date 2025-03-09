@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tor Example</title>
+  <title>Typed.js Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- Google Fonts for Silka -->
@@ -90,7 +90,6 @@
       height: 88px;
       display: inline-block;
       vertical-align: baseline;
-      left: 0; /* Ensure the cursor starts at the beginning */
     }
 
     /* Blinking effect for cursor */
@@ -152,6 +151,11 @@
         // Fix the cursor behavior during typing pause.
         const cursor = document.querySelector('.typed-cursor');
         cursor.style.opacity = 1;
+      },
+      onStringTyped: function() {
+        // Fix position of the cursor while typing.
+        const typedCursor = document.querySelector('.typed-cursor');
+        typedCursor.style.left = `${document.querySelector('.typed-words').offsetWidth}px`; // Dynamically adjusts the cursor position
       },
     });
   </script>
