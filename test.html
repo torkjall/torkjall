@@ -193,6 +193,34 @@
         font-size: 1rem;
       }
     }
+
+    /* Scroll Down Arrow */
+    .down-arrow {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      z-index: 10;
+      transition: transform 0.3s ease;
+    }
+
+    .down-arrow:hover {
+      transform: translateX(-50%) scale(1.2);
+    }
+
+    /* Hover effect on arrow */
+    .down-arrow svg {
+      width: 18px;
+      height: 16px;
+      fill: #FFFFFF;
+      transition: fill 0.3s ease;
+    }
+
+    .down-arrow:hover svg {
+      fill: #FFEB6E;
+    }
+
   </style>
 </head>
 
