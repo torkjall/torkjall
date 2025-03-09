@@ -142,11 +142,11 @@
 
       .p1 {
         font-size: 1.5rem;
-        text-align: left; /* Align p1 text to the left */
+        text-align: left; 
       }
 
       .button {
-        margin-left: 0; /* Reset margin-left */
+        margin-left: 0; 
         margin-right: -15px; 
         font-size: 1rem; 
         padding: 12px 24px; 
@@ -184,11 +184,11 @@
 
       .p1 {
         font-size: 1.25rem;
-        text-align: left; /* Align p1 text to the left */
+        text-align: left; 
       }
 
       .button {
-        margin-left: 0; /* Reset margin-left */
+        margin-left: 0; 
         margin-right: -10px; 
         font-size: 0.9rem; 
         padding: 10px 20px; 
@@ -204,8 +204,7 @@
 <body>
   <div class="container">
     <div class="typed-wrapper">
-      <div class="typed-words"></div>
-    </div>
+      <div class="typed-words"></div> <div class="typed-cursor"></div> </div>
     <p class="p1">I specialize in mobile and web products</p>
     <a href="#" class="button">
       Learn More
@@ -215,7 +214,25 @@
     </a>
   </div>
   <script>
-    // ... (your Typed.js script) ...
+    var typed = new Typed(".typed-words", {
+      strings: [
+        "I'm <span class='highlight'>Tor</span>",
+        "I'm a <span class='highlight'>designer</span>",
+        "I'm an <span class='highlight'>expert</span>"
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1500,
+      startDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+      attr: null,
+      onTypingPaused: function() {
+        const cursor = document.querySelector('.typed-cursor');
+        cursor.style.opacity = 1;
+      },
+    });
   </script>
 </body>
 </html>
