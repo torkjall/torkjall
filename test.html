@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typed.js Example</title>
   <script src="./typed.min.js"></script>
-  <!-- Google Fonts for Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Google Fonts for Roboto and Silka -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <style>
     /* Set the background color and text color */
     body {
@@ -40,11 +42,36 @@
     .p1 {
       font-size: 2.25rem; /* Larger font size for the paragraph */
       margin-top: 20px; /* Space between the typed words and the paragraph */
+      font-family: 'Silka', sans-serif; /* Apply Silka font to the paragraph */
     }
 
     /* Highlight style for the words Tor, designer, expert */
     .highlight {
       color: #FFEB6E; /* Highlight color */
+    }
+
+    /* Button styling like the "Learn More" button on torkjall.com */
+    .button {
+      display: inline-block;
+      padding: 16px 32px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #FFFFFF;
+      background-color: #FFEB6E;
+      border: 2px solid #FFEB6E;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: transparent;
+      color: #FFEB6E;
+      border-color: #FFEB6E;
     }
 
     /* Responsive styling for smaller screens */
@@ -77,6 +104,8 @@
   <div class="container">
     <div class="typed-words"></div>
     <p class="p1">I specialize in mobile and web products</p>
+    <!-- "Learn More" style button -->
+    <a href="#" class="button">Learn More</a>
   </div>
 
   <script>
