@@ -11,40 +11,65 @@
     /* Set the background color and text color */
     body {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* Align content to the left */
       align-items: center;
       height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
       font-family: 'Roboto', sans-serif; /* Use Roboto font */
       background-color: #171715; /* Background color */
       color: #FFFFFF; /* Text color */
-      padding: 20px; /* Padding around the page */
+      padding: 0 20px; /* Padding around the page */
       box-sizing: border-box; /* Include padding in total width/height */
     }
 
     /* Container for the text */
     .container {
       text-align: left; /* Align text to the left */
-      margin-left: 20px; /* Left margin */
+      margin-left: 64px; /* Left margin closer to the left side */
       padding: 20px; /* Padding around the text */
     }
 
     /* Styling for the typed words */
     .typed-words {
-      font-size: 3rem; /* Larger font size */
+      font-size: 88px; /* Much larger font size for typed text */
       font-weight: 500; /* Medium weight */
       padding-bottom: 10px; /* Space between typed words and paragraph */
     }
 
     /* Styling for the paragraph */
     .p1 {
-      font-size: 1.75rem; /* Larger font size for the paragraph */
+      font-size: 2.25rem; /* Larger font size for the paragraph */
       margin-top: 20px; /* Space between the typed words and the paragraph */
     }
 
     /* Highlight style for the words Tor, designer, expert */
     .highlight {
       color: #FFEB6E; /* Highlight color */
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        margin-left: 20px; /* Reduce left margin on smaller screens */
+      }
+      
+      .typed-words {
+        font-size: 60px; /* Smaller font size for typed text on smaller screens */
+      }
+
+      .p1 {
+        font-size: 1.5rem; /* Slightly smaller paragraph font size on small screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .typed-words {
+        font-size: 48px; /* Further decrease font size on extra small screens */
+      }
+
+      .p1 {
+        font-size: 1.25rem; /* Smaller font size for paragraph on very small screens */
+      }
     }
   </style>
 </head>
