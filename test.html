@@ -43,17 +43,18 @@
   min-width: 1ch; /* Ensures space for cursor even when text is empty */
 }
 
-.typed-cursor {
-  font-size: 108px; /* Keep the cursor big */
-  color: #FFFFFF;
+.typed-words {
+  font-size: 88px;
   font-weight: 500;
-  position: absolute;
-  animation: blink 0.8s step-end infinite;
-  line-height: 88px; /* Match text */
-  height: 88px;
+  white-space: nowrap;
+  color: #FFFFFF;
   display: inline-block;
-  vertical-align: baseline;
+  line-height: 88px;
+  letter-spacing: -0.5px;
+  min-height: 88px; /* Ensures the row height stays fixed */
+  min-width: 0.1ch; /* Keeps cursor at the start */
 }
+
 
 
     /* Highlight text (e.g. Tor, designer, expert) */
