@@ -8,28 +8,25 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Body styling */
         body {
             margin: 0;
             font-family: 'Silka', sans-serif;
             background-color: #171715;
             color: #FFFFFF;
             display: flex;
-            justify-content: flex-start;
+            flex-direction: column; /* Changed to column */
             align-items: flex-start;
-            height: auto;
+            min-height: 100vh; /* Ensure full viewport height */
             padding: 0;
             position: relative;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
+            scroll-behavior: smooth;
         }
 
-        /* Container */
         .container {
             margin-left: 64px;
             padding-top: 100px;
         }
 
-        /* Typed text styling */
         .typed-wrapper {
             height: 90px;
             position: relative;
@@ -49,12 +46,10 @@
             z-index: 1;
         }
 
-        /* Highlight text (e.g. Tor, designer, expert) */
         .highlight {
             color: #FFEB6E;
         }
 
-        /* Paragraph text styling */
         .p1 {
             font-size: 2.25rem;
             margin: 0 0 16px 0;
@@ -62,7 +57,6 @@
             letter-spacing: -0.5px;
         }
 
-        /* Button styling */
         .button {
             padding: 16px 32px;
             font-size: 1.125rem;
@@ -97,7 +91,6 @@
             transform: rotate(0deg);
         }
 
-        /* Cursor styling */
         .typed-cursor {
             font-size: 100px;
             color: #FFFFFF;
@@ -110,14 +103,12 @@
             margin-left: 2px;
         }
 
-        /* Blinking effect for cursor */
         @keyframes blink {
             50% {
                 opacity: 0;
             }
         }
 
-        /* Downward arrow styling */
         .down-arrow {
             position: absolute;
             bottom: 32px;
@@ -128,7 +119,6 @@
             cursor: pointer;
         }
 
-        /* Fade in animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -139,7 +129,6 @@
             }
         }
 
-        /* Portfolio Section */
         #portfolio {
             width: 100%;
             padding: 100px 64px;
@@ -152,98 +141,17 @@
             padding: 20px;
         }
 
-        /* Responsive styling */
         @media (max-width: 768px) {
-            body {
-                padding: 0 32px;
-            }
-
             .container {
                 margin-left: 0;
                 padding-top: 50px;
             }
-
-            .typed-wrapper {
-                height: 62px;
-            }
-
-            .typed-words {
-                font-size: 60px;
-                line-height: 62px;
-            }
-
-            .typed-cursor {
-                font-size: 70px;
-                height: 100%;
-                line-height: 100%;
-            }
-
-            .p1 {
-                font-size: 1.5rem;
-                text-align: left;
-            }
-
-            .button {
-                margin-left: 0;
-                margin-right: -15px;
-                font-size: 1rem;
-                padding: 12px 24px;
-            }
-
-            .arrow-icon {
-                width: 15px;
-                height: 13px;
-            }
-
-            #portfolio {
-                padding: 50px 32px;
-            }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 0 32px;
-            }
-
             .container {
                 margin-left: 0;
                 padding-top: 30px;
-            }
-
-            .typed-wrapper {
-                height: 50px;
-            }
-
-            .typed-words {
-                font-size: 48px;
-                line-height: 50px;
-            }
-
-            .typed-cursor {
-                font-size: 55px;
-                height: 100%;
-                line-height: 100%;
-            }
-
-            .p1 {
-                font-size: 1.25rem;
-                text-align: left;
-            }
-
-            .button {
-                margin-left: 0;
-                margin-right: -10px;
-                font-size: 0.9rem;
-                padding: 10px 20px;
-            }
-
-            .arrow-icon {
-                width: 12px;
-                height: 10px;
-            }
-
-            #portfolio {
-                padding: 30px 32px;
             }
         }
     </style>
@@ -259,4 +167,12 @@
             Learn More
             <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M
+                    d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
+                    fill="currentColor"></path>
+            </svg>
+        </a>
+    </div>
+
+    <svg class="down-arrow" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.
