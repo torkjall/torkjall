@@ -40,6 +40,7 @@
       padding-bottom: 10px; /* Space between typed words and paragraph */
       white-space: nowrap; /* Prevent text wrapping */
       overflow: hidden; /* Hide overflow of text */
+      display: inline-block; /* Ensure cursor stays in the right place */
     }
 
     /* Styling for the paragraph */
@@ -101,6 +102,21 @@
         font-size: 1.25rem; /* Smaller font size for paragraph on very small screens */
       }
     }
+
+    /* Customizing the cursor to match the one on the site */
+    .typed-cursor {
+      font-size: 88px; /* Match the font size of the typed text */
+      font-weight: 500; /* Match the font weight */
+      color: #FFEB6E; /* Set cursor color to match the highlight color */
+      opacity: 1; /* Ensure the cursor is visible */
+      animation: blink 0.8s step-end infinite; /* Make it blink */
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -123,8 +139,8 @@
       backDelay: 1500,
       startDelay: 1500,
       loop: true,
-      showCursor: true,
-      cursorChar: "|",
+      showCursor: true,  // Enable cursor visibility
+      cursorChar: "|",  // Default cursor character
       attr: null,
     });
   </script>
