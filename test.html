@@ -152,7 +152,7 @@
     }
 
     .portfolio-item img {
-      width: 25%; /* Reduced width for the image */
+      width: 30%; /* Adjusted image width to keep it smaller */
       height: auto;
       object-fit: cover;
       border-radius: 8px;
@@ -266,7 +266,7 @@
       <div class="typed-words"></div>
     </div>
     <p class="p1">I specialize in mobile and web products</p>
-    <a href="#" class="button">
+    <a href="#" class="button" id="scrollButton">
       Learn More
       <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -283,7 +283,7 @@
   </svg>
 
   <!-- Portfolio Section -->
-  <div class="portfolio-section">
+  <div class="portfolio-section" id="portfolioSection">
     <div class="portfolio-container">
       <!-- Project 1 -->
       <div class="portfolio-item">
@@ -325,6 +325,13 @@
         const cursor = document.querySelector('.typed-cursor');
         cursor.style.opacity = 1;
       },
+    });
+
+    // Smooth scroll to portfolio section on arrow click
+    document.querySelector('.down-arrow').addEventListener('click', function () {
+      document.getElementById('portfolioSection').scrollIntoView({
+        behavior: 'smooth'
+      });
     });
   </script>
 </body>
