@@ -39,9 +39,10 @@
       display: inline-block;
       line-height: 88px;
       letter-spacing: -0.5px;
-      min-height: 88px; /* Ensures the row height stays fixed */
-      min-width: 1ch; /* Prevents cursor from shrinking */
-      visibility: visible; /* Keeps the space even when the text is empty */
+      position: relative;
+      margin-right: 0;
+      z-index: 1; /* Ensures the text is above the cursor */
+      min-height: 88px; /* Keeps space for the cursor */
     }
 
     /* Highlight text (e.g. Tor, designer, expert) */
@@ -81,16 +82,17 @@
 
     /* Cursor styling */
     .typed-cursor {
-      font-size: 108px; /* Bigger cursor */
-      color: #FFFFFF;
-      font-weight: 500;
-      position: absolute;
-      animation: blink 0.8s step-end infinite;
-      line-height: 88px; /* Aligns with text */
-      height: 88px;
-      display: inline-block;
-      vertical-align: baseline;
-    }
+  font-size: 108px; /* Bigger cursor */
+  color: #FFFFFF;
+  font-weight: 500;
+  position: absolute;
+  animation: blink 0.8s step-end infinite;
+  line-height: 88px; /* Same as text */
+  height: 88px; /* Ensures alignment */
+  display: inline-block;
+  vertical-align: baseline; /* Align cursor with text */
+}
+
 
     /* Blinking effect for cursor */
     @keyframes blink {
@@ -151,11 +153,6 @@
         // Fix the cursor behavior during typing pause.
         const cursor = document.querySelector('.typed-cursor');
         cursor.style.opacity = 1;
-      },
-      onStringTyped: function() {
-        // Fix position of the cursor while typing.
-        const typedCursor = document.querySelector('.typed-cursor');
-        typedCursor.style.left = `${document.querySelector('.typed-words').offsetWidth}px`; // Dynamically adjusts the cursor position
       },
     });
   </script>
