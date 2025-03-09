@@ -28,9 +28,6 @@
     .container {
       margin-left: 64px;
       position: relative;
-      display: flex;
-      align-items: center;
-      height: 88px; /* Fixed height to avoid page jumping */
     }
 
     /* Typed text styling */
@@ -85,16 +82,17 @@
 
     /* Cursor styling */
     .typed-cursor {
-      font-size: 108px; /* Bigger cursor */
-      color: #FFFFFF;
-      font-weight: 500;
-      position: absolute;
-      animation: blink 0.8s step-end infinite;
-      line-height: 88px; /* Same as text */
-      height: 88px; /* Ensures alignment */
-      display: inline-block;
-      vertical-align: baseline; /* Align cursor with text */
-    }
+  font-size: 108px; /* Bigger cursor */
+  color: #FFFFFF;
+  font-weight: 500;
+  position: absolute;
+  animation: blink 0.8s step-end infinite;
+  line-height: 88px; /* Same as text */
+  height: 88px; /* Ensures alignment */
+  display: inline-block;
+  vertical-align: baseline; /* Align cursor with text */
+}
+
 
     /* Blinking effect for cursor */
     @keyframes blink {
