@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tor</title>
+  <title>Typed.js Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   
   <!-- Google Fonts for Roboto and Silka -->
@@ -42,7 +42,7 @@
       overflow: hidden;
       display: inline-block;
       min-height: 88px;
-      line-height: 88px;
+      line-height: 88px; /* Ensures alignment with the cursor */
     }
 
     /* Styling for the paragraph */
@@ -86,7 +86,7 @@
       font-size: 88px;
       font-weight: 500;
       line-height: 88px;
-      vertical-align: bottom;
+      vertical-align: bottom; /* Ensures cursor aligns properly */
       animation: blink 0.8s step-end infinite;
     }
 
@@ -143,8 +143,8 @@
       backDelay: 1500,
       startDelay: 1500,
       loop: true,
-      showCursor: true,  // Ensure cursor is visible
-      cursorChar: "|",   // Cursor character
+      showCursor: true,  // Enable cursor
+      cursorChar: "|",   // Cursor character (the vertical bar)
       attr: null,
     });
   </script>
