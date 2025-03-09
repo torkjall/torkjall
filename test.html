@@ -81,16 +81,19 @@
     }
 
     /* Cursor styling */
-    .typed-cursor {
-  font-size: 88px; /* Match text line-height */
-  color: #FFFFFF;
-  font-weight: 500;
-  position: absolute;
-  animation: blink 0.8s step-end infinite;
-  vertical-align: top; /* Ensures no unwanted shifting */
-  margin: 0; /* Remove extra spacing */
-  line-height: 88px; /* Exact match to text */
-}
+      .typed-cursor {
+    font-size: 88px; /* Match text size */
+    color: #FFFFFF;
+    font-weight: 500;
+    position: absolute;
+    animation: blink 0.8s step-end infinite;
+    line-height: 88px; /* Ensures cursor fills the height */
+    height: 88px; /* Explicitly set height */
+    display: inline-block; /* Ensures proper alignment */
+    margin: 0; /* Removes unwanted space */
+    padding: 0; /* Ensures no extra spacing */
+  }
+
 
 
     /* Blinking effect for cursor */
