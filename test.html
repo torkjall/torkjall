@@ -102,11 +102,17 @@
     /* Downward arrow styling */
     .down-arrow {
       position: absolute;
-      bottom: 120px;
+      bottom: 140px; /* Increased the distance to 140px */
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
       opacity: 0;
       animation: fadeIn 1s ease 3s forwards;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .down-arrow:hover {
+      color: #FFEB6E; /* Hover effect: same yellow as the typed text */
     }
 
     /* Fade in animation */
@@ -122,7 +128,7 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 120px;
+      margin-top: 140px; /* Increased the space between arrow and portfolio section */
       padding: 50px 20px;
       background-color: #171715;
       width: 100%;
@@ -152,18 +158,18 @@
     }
 
     .portfolio-item img {
-      width: 30%; /* Adjusted image width to keep it smaller */
+      width: 30%;
       height: auto;
       object-fit: cover;
       border-radius: 8px;
     }
 
     .portfolio-item .content {
-      width: 60%; /* Text section */
+      width: 60%;
       padding-left: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Center text vertically */
+      justify-content: center;
     }
 
     .portfolio-item h3 {
@@ -216,45 +222,45 @@
       }
 
       .portfolio-item {
-        flex-direction: row; /* Keep the image on the right and text on the left on medium screens */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
       }
 
       .portfolio-item img {
-        width: 35%; /* Slightly increased width for medium screens */
+        width: 35%;
       }
     }
 
     /* Mobile view for portfolio (smaller than 768px) */
     @media (max-width: 768px) {
       .portfolio-item {
-        flex-direction: column; /* Stack text and image on top of each other */
+        flex-direction: column;
         align-items: center;
-        text-align: center; /* Center text for smaller screens */
+        text-align: center;
       }
 
       .portfolio-item img {
-        width: 60%; /* Reduced image size on smaller screens */
-        margin-bottom: 20px; /* Added space between image and text */
+        width: 60%;
+        margin-bottom: 20px;
       }
 
       .portfolio-item .content {
         width: 100%;
         padding-left: 0;
-        text-align: center; /* Center text for smaller screens */
+        text-align: center;
       }
 
       .typed-words {
-        font-size: 50px; /* Adjusted font size for mobile */
+        font-size: 50px;
       }
 
       .p1 {
-        font-size: 1.5rem; /* Smaller font size for mobile */
+        font-size: 1.5rem;
       }
 
       .button {
-        font-size: 1rem; /* Smaller button text for mobile */
+        font-size: 1rem;
       }
     }
   </style>
@@ -329,11 +335,12 @@
 
     // Smooth scroll to portfolio section on arrow click
     document.querySelector('.down-arrow').addEventListener('click', function () {
-      document.getElementById('portfolioSection').scrollIntoView({
+      document.getElementById("portfolioSection").scrollIntoView({
         behavior: 'smooth'
       });
     });
   </script>
+
 </body>
 
 </html>
