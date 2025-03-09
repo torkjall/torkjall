@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tor Kjäll</title>
+  <title>Typed.js Example</title>
   <script src="./typed.min.js"></script>
   
   <!-- Google Fonts for Roboto and Silka -->
@@ -41,7 +41,7 @@
       white-space: nowrap; /* Prevent text wrapping */
       overflow: hidden; /* Hide overflow of text */
       display: inline-block; /* Ensure cursor stays in the right place */
-      position: relative; /* Create a relative positioning context for the cursor */
+      line-height: 1; /* Fix the line height to prevent misalignment */
     }
 
     /* Styling for the paragraph */
@@ -104,17 +104,18 @@
       }
     }
 
-    /* Customizing the cursor to match the one on the site */
+    /* Fix cursor color and alignment */
     .typed-cursor {
+      color: #FFFFFF !important; /* Ensure the cursor is white */
       font-size: 88px; /* Match the font size of the typed text */
       font-weight: 500; /* Match the font weight */
-      color: #FFFFFF; /* Set cursor color to white */
-      opacity: 1; /* Ensure the cursor is visible */
-      position: absolute; /* Absolute positioning to align it correctly */
-      bottom: 0; /* Align the cursor with the bottom of the text */
+      line-height: 1; /* Fix the line height to align with the text */
+      vertical-align: bottom; /* Align the cursor at the bottom */
+      opacity: 1; /* Ensure cursor is fully visible */
       animation: blink 0.8s step-end infinite; /* Make it blink */
     }
 
+    /* Cursor blinking animation */
     @keyframes blink {
       50% {
         opacity: 0;
