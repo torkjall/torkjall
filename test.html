@@ -99,16 +99,14 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 100px 32px;
+      justify-content: space-between;
+      padding: 100px 64px;
       box-sizing: border-box;
     }
 
     .project-text {
       max-width: 500px;
       text-align: left;
-      flex: 1;
     }
 
     .project-text h2 {
@@ -125,14 +123,7 @@
     }
 
     .project-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .project-image img {
-      width: 80%;
-      max-width: 350px; /* Smaller image */
+      max-width: 300px; /* Smaller image */
       height: auto;
       border-radius: 10px;
     }
@@ -158,9 +149,9 @@
         font-size: 1rem;
       }
 
-      .project-image img {
-        width: 70%;
-        max-width: 300px;
+      .project-image {
+        width: 80%;
+        max-width: 280px;
       }
     }
   </style>
@@ -187,9 +178,7 @@
       <h2>My First Project</h2>
       <p>This is a description of my first project.</p>
     </div>
-    <div class="project-image">
-      <img src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965" alt="Project Image">
-    </div>
+    <img class="project-image" src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965" alt="Project Image">
   </div>
 
   <script>
