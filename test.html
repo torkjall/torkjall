@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Typed.js Example</title>
   <script src="./typed.min.js"></script>
+  <!-- Google Fonts for Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     /* Set the background color and text color */
     body {
@@ -13,26 +15,30 @@
       align-items: center;
       height: 100vh; /* Full viewport height */
       margin: 0; /* Remove default margin */
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif; /* Use Roboto font */
       background-color: #171715; /* Background color */
       color: #FFFFFF; /* Text color */
+      padding: 20px; /* Padding around the page */
+      box-sizing: border-box; /* Include padding in total width/height */
     }
 
     /* Container for the text */
     .container {
       text-align: left; /* Align text to the left */
       margin-left: 20px; /* Left margin */
+      padding: 20px; /* Padding around the text */
     }
 
     /* Styling for the typed words */
     .typed-words {
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 3rem; /* Larger font size */
+      font-weight: 500; /* Medium weight */
+      padding-bottom: 10px; /* Space between typed words and paragraph */
     }
 
     /* Styling for the paragraph */
     .p1 {
-      font-size: 1.5rem;
+      font-size: 1.75rem; /* Larger font size for the paragraph */
       margin-top: 20px; /* Space between the typed words and the paragraph */
     }
 
