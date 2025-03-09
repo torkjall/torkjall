@@ -71,7 +71,7 @@
       font-weight: 600;
       color: #FFFFFF;
       background-color: #171715;
-      text-transform: uppercase;
+      text-transform: none; /* Removed uppercase */
       letter-spacing: 1px;
       text-align: center;
       text-decoration: none;
@@ -102,7 +102,7 @@
     /* Downward arrow styling */
     .down-arrow {
       position: absolute;
-      bottom: 140px; /* Increased the distance to 140px */
+      bottom: 140px;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
       opacity: 0;
@@ -112,7 +112,7 @@
     }
 
     .down-arrow:hover {
-      color: #FFEB6E; /* Hover effect: same yellow as the typed text */
+      color: #FFEB6E;
     }
 
     /* Fade in animation */
@@ -128,11 +128,13 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 140px; /* Increased the space between arrow and portfolio section */
+      margin-top: 140px;
       padding: 50px 20px;
       background-color: #171715;
       width: 100%;
       box-sizing: border-box;
+      margin-left: 120px;
+      margin-right: 120px;
     }
 
     .portfolio-container {
@@ -325,16 +327,10 @@
       startDelay: 1500,
       loop: true,
       showCursor: true,
-      cursorChar: "|",
-      attr: null,
-      onTypingPaused: function () {
-        const cursor = document.querySelector('.typed-cursor');
-        cursor.style.opacity = 1;
-      },
+      cursorChar: "|"
     });
 
-    // Smooth scroll to portfolio section on arrow click
-    document.querySelector('.down-arrow').addEventListener('click', function () {
+    document.getElementById("scrollButton").addEventListener("click", function () {
       document.getElementById("portfolioSection").scrollIntoView({
         behavior: 'smooth'
       });
