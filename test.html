@@ -16,11 +16,11 @@
       color: #FFFFFF;
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align content to the left */
+      align-items: flex-start;
       justify-content: flex-start;
       height: 100%;
       padding: 0;
-      overflow: auto; /* Allow scrolling */
+      overflow: auto;
     }
 
     /* Container */
@@ -101,7 +101,7 @@
     /* Downward arrow styling */
     .down-arrow {
       position: absolute;
-      bottom: 32px;
+      bottom: 120px;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
       opacity: 0;
@@ -121,36 +121,43 @@
 
     /* Portfolio Section */
     .portfolio-section {
-      margin-top: 120vh; /* Pushes portfolio section way down the page */
+      margin-top: 120px; /* Adjusted margin to reduce the space */
       padding: 50px 20px;
-      background-color: #222220;
+      background-color: #171715; /* Same color as the rest of the page */
       width: 100%;
-      text-align: center;
     }
 
     .portfolio-container {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      flex-wrap: wrap;
     }
 
     .portfolio-item {
-      background-color: #333333;
-      width: 80%;
-      max-width: 400px;
+      display: flex;
+      flex-direction: row; /* Align text to the left and image to the right */
+      justify-content: space-between;
+      background-color: #222220;
+      width: 100%;
+      max-width: 1000px;
       margin-bottom: 30px;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
     }
 
     .portfolio-item img {
-      width: 100%;
+      width: 45%;
       height: auto;
       object-fit: cover;
-      border-bottom: 2px solid #FFEB6E;
-      max-height: 180px; /* Reducing image size */
+      border-radius: 8px;
+    }
+
+    .portfolio-item .content {
+      width: 50%;
+      padding-left: 20px;
     }
 
     .portfolio-item h3 {
@@ -226,12 +233,13 @@
     <div class="portfolio-container">
       <!-- Project 1 -->
       <div class="portfolio-item">
-        <img src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965" alt="Project 1 Image">
         <div class="content">
           <h3>Project 1: Design System</h3>
           <p>This design system is built to ensure consistency and improve the efficiency of building UI components for large-scale applications.</p>
           <a href="https://www.example.com" target="_blank">View Full Case Study →</a>
         </div>
+        <img src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965"
+          alt="Project 1 Image">
       </div>
       <!-- Add more portfolio items as needed -->
     </div>
