@@ -32,18 +32,29 @@
 
     /* Typed text styling */
     .typed-words {
-      font-size: 88px;
-      font-weight: 500;
-      white-space: nowrap;
-      color: #FFFFFF;
-      display: inline-block;
-      line-height: 88px;
-      letter-spacing: -0.5px;
-      position: relative;
-      margin-right: 0;
-      z-index: 1; /* Ensures the text is above the cursor */
-      min-height: 88px; /* Keeps space for the cursor */
-    }
+  font-size: 88px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #FFFFFF;
+  display: inline-block;
+  line-height: 88px;
+  letter-spacing: -0.5px;
+  min-height: 88px; /* Prevents page jumping */
+  min-width: 1ch; /* Ensures space for cursor even when text is empty */
+}
+
+.typed-cursor {
+  font-size: 108px; /* Keep the cursor big */
+  color: #FFFFFF;
+  font-weight: 500;
+  position: absolute;
+  animation: blink 0.8s step-end infinite;
+  line-height: 88px; /* Match text */
+  height: 88px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 
     /* Highlight text (e.g. Tor, designer, expert) */
     .highlight {
