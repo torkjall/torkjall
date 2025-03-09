@@ -40,7 +40,7 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      line-height: 88px; /* Ensure correct alignment */
+      line-height: 1; /* No extra space between lines */
       color: #FFFFFF;  /* Text color */
       min-height: 88px; /* Prevent jumping */
       letter-spacing: -0.5px;  /* Adjust spacing */
@@ -90,7 +90,7 @@
       color: #FFFFFF; /* White cursor color */
       animation: blink 0.8s step-end infinite;
       display: inline-block; /* Inline to keep the cursor next to text */
-      line-height: 88px; /* Align cursor to line height of text */
+      vertical-align: bottom; /* Align the cursor with the text */
       margin-left: 5px; /* Adjust cursor position slightly */
     }
 
