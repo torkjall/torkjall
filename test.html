@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tor Example</title>
+  <title>Typed.js Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- Google Fonts for Silka -->
@@ -40,11 +40,11 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      line-height: 88px; /* Ensures the cursor aligns correctly */
-      color: #FFFFFF;  /* Ensure text is white */
-      min-height: 88px;  /* Prevents jumping */
-      letter-spacing: -0.5px;  /* Adjust letter-spacing to match Torkjall */
-      position: relative;  /* This ensures the cursor is positioned correctly within the text */
+      line-height: 88px; /* Ensure correct alignment */
+      color: #FFFFFF;  /* Text color */
+      min-height: 88px; /* Prevent jumping */
+      letter-spacing: -0.5px;  /* Adjust spacing */
+      position: relative;
     }
 
     /* Highlight style for words Tor, designer, expert */
@@ -57,7 +57,7 @@
       font-size: 2.25rem;
       margin-top: 20px;
       font-weight: 500;
-      letter-spacing: -0.5px;  /* Match letter-spacing */
+      letter-spacing: -0.5px;
     }
 
     /* Button styling */
@@ -89,9 +89,11 @@
       font-weight: 500;
       color: #FFFFFF; /* White cursor color */
       animation: blink 0.8s step-end infinite;
-      display: inline-block;  /* Keep the cursor in line with the text */
-      line-height: 88px; /* Align cursor to line height of text */
-      transform: translateY(0); /* Fine tune cursor position */
+      display: inline-block;
+      position: absolute; /* Absolutely positioned cursor */
+      top: 0; /* Aligns the cursor to the top */
+      left: 100%; /* Place the cursor right after the text */
+      margin-left: 5px; /* Fine-tune the cursor position */
     }
 
     /* Blinking animation for cursor */
