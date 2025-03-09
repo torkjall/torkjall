@@ -8,61 +8,127 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* Keep existing styles */
+    /* Body styling */
     body {
       margin: 0;
       font-family: 'Silka', sans-serif;
       background-color: #171715;
       color: #FFFFFF;
       display: flex;
-      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
-      height: 100vh;
+      flex-direction: column;
       padding: 0;
       overflow: hidden;
+      position: relative;
+      /* Added position relative to body */
     }
+
+    /* Container */
     .container {
-      margin-top: 64px;
+      margin-left: 64px;
       text-align: center;
     }
-    .typed-words {
-      font-size: 88px;
-      font-weight: 600;
-      color: #FFFFFF;
+
+    /* Portfolio Section */
+    .portfolio {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background-color: #222220;
+      width: 100%;
+      max-width: 1200px;
+      margin: 50px auto;
+      border-radius: 8px;
     }
-    .highlight {
+
+    .portfolio h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .portfolio .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio .project {
+      background-color: #333333;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio .project img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 2px solid #FFEB6E;
+    }
+
+    .portfolio .project-info {
+      padding: 16px;
+      background-color: #222220;
+    }
+
+    .portfolio .project-info h3 {
+      font-size: 1.5rem;
+      margin: 0 0 10px;
       color: #FFEB6E;
     }
-    .p1 {
-      font-size: 2.25rem;
-      font-weight: 500;
+
+    .portfolio .project-info p {
+      font-size: 1rem;
+      color: #BBBBBB;
     }
+
+    .portfolio .project:hover {
+      transform: scale(1.05);
+    }
+
+    /* Button styling */
     .button {
       padding: 16px 32px;
       font-size: 1.125rem;
       font-weight: 600;
-      background-color: #171715;
-      border-radius: 60px;
-      transition: 0.3s;
-      text-decoration: none;
       color: #FFFFFF;
+      background-color: #171715;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 60px;
+      margin-left: -30px;
+      transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
     }
+
     .button:hover {
       background-color: #222220;
-    }
-    .new-section {
-      margin-top: 100px;
-      text-align: center;
-    }
-    .new-section h2 {
-      font-size: 2rem;
-      color: #FFEB6E;
-    }
-    .new-section p {
-      font-size: 1.5rem;
       color: #FFFFFF;
+    }
+
+    /* Typed text styling */
+    .typed-wrapper {
+      height: 90px;
+      position: relative;
+      margin-bottom: 32px;
+    }
+
+    .typed-words {
+      font-size: 88px;
+      font-weight: 600;
+      white-space: nowrap;
+      color: #FFFFFF;
+      display: inline-block;
+      line-height: 90px;
+      letter-spacing: -0.5px;
+      position: relative;
+      margin-right: 0;
+      z-index: 1;
     }
   </style>
 </head>
@@ -73,13 +139,37 @@
       <div class="typed-words"></div>
     </div>
     <p class="p1">I specialize in mobile and web products</p>
-    <a href="#" class="button">Learn More</a>
+    <a href="#" class="button">
+      Learn More
+    </a>
   </div>
 
-  <!-- New Section -->
-  <div class="new-section">
-    <h2>New Section Title</h2>
-    <p>Here is some additional content that you requested.</p>
+  <!-- Portfolio Section -->
+  <div class="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="https://via.placeholder.com/300" alt="Project 1">
+        <div class="project-info">
+          <h3>Project 1</h3>
+          <p>Description of the project goes here. Showcase your skills and creativity.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300" alt="Project 2">
+        <div class="project-info">
+          <h3>Project 2</h3>
+          <p>Description of the project goes here. Showcase your skills and creativity.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/300" alt="Project 3">
+        <div class="project-info">
+          <h3>Project 3</h3>
+          <p>Description of the project goes here. Showcase your skills and creativity.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -92,7 +182,15 @@
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1500,
-      loop: true
+      startDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+      attr: null,
+      onTypingPaused: function () {
+        const cursor = document.querySelector('.typed-cursor');
+        cursor.style.opacity = 1;
+      },
     });
   </script>
 </body>
