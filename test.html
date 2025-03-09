@@ -21,7 +21,6 @@
       padding: 0;
       overflow: hidden;
       position: relative;
-      /* Added position relative to body */
     }
 
     /* Container */
@@ -34,7 +33,6 @@
       height: 90px;
       position: relative;
       margin-bottom: 32px;
-      /* Added margin-bottom to typed-wrapper */
     }
 
     .typed-words {
@@ -59,7 +57,6 @@
     .p1 {
       font-size: 2.25rem;
       margin: 0 0 16px 0;
-      /* Added 16px margin-bottom to p1 */
       font-weight: 500;
       letter-spacing: -0.5px;
     }
@@ -99,34 +96,12 @@
       transform: rotate(0deg);
     }
 
-    /* Cursor styling */
-    .typed-cursor {
-      font-size: 100px;
-      color: #FFFFFF;
-      font-weight: 500;
-      position: absolute;
-      animation: blink 0.8s step-end infinite;
-      height: 100%;
-      line-height: 100%;
-      display: inline-block;
-      margin-left: 2px;
-    }
-
-    /* Blinking effect for cursor */
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
     /* Downward arrow styling */
     .down-arrow {
       position: absolute;
       bottom: 32px;
-      /* 32px from the bottom */
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
-      /* Rotated 90 degrees clockwise */
       opacity: 0;
       animation: fadeIn 1s ease 3s forwards;
     }
@@ -142,90 +117,63 @@
       }
     }
 
-    /* Responsive styling */
-    @media (max-width: 768px) {
-      body {
-        padding: 0 32px;
-      }
-
-      .container {
-        margin-left: 0;
-      }
-
-      .typed-wrapper {
-        height: 62px;
-      }
-
-      .typed-words {
-        font-size: 60px;
-        line-height: 62px;
-      }
-
-      .typed-cursor {
-        font-size: 70px;
-        height: 100%;
-        line-height: 100%;
-      }
-
-      .p1 {
-        font-size: 1.5rem;
-        text-align: left;
-      }
-
-      .button {
-        margin-left: 0;
-        margin-right: -15px;
-        font-size: 1rem;
-        padding: 12px 24px;
-      }
-
-      .arrow-icon {
-        width: 15px;
-        height: 13px;
-      }
+    /* Portfolio Section */
+    .portfolio-section {
+      margin-top: 150vh; /* Ensures it is below the fold (requires scrolling) */
+      padding: 50px 20px;
+      background-color: #222220;
+      width: 100%;
+      text-align: center;
     }
 
-    @media (max-width: 480px) {
-      body {
-        padding: 0 32px;
-      }
-
-      .container {
-        margin-left: 0;
-      }
-
-      .typed-wrapper {
-        height: 50px;
-      }
-
-      .typed-words {
-        font-size: 48px;
-        line-height: 50px;
-      }
-
-      .typed-cursor {
-        font-size: 55px;
-        height: 100%;
-        line-height: 100%;
-      }
-
-      .p1 {
-        font-size: 1.25rem;
-        text-align: left;
-      }
-
-      .button {
-        margin-left: 0;
-        margin-right: -10px;
-        font-size: 0.9rem;
-        padding: 10px 20px;
-      }
-
-      .arrow-icon {
-        width: 12px;
-        height: 10px;
-      }
+    .portfolio-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    .portfolio-item {
+      background-color: #333333;
+      width: 80%;
+      max-width: 400px;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 2px solid #FFEB6E;
+      max-height: 180px; /* Reducing image size */
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.25rem;
+      margin-top: 16px;
+      color: #FFEB6E;
+    }
+
+    .portfolio-item p {
+      color: #BBBBBB;
+      font-size: 1rem;
+    }
+
+    .portfolio-item a {
+      display: inline-block;
+      margin-top: 16px;
+      color: #FFEB6E;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.05);
+    }
+
   </style>
 </head>
 
@@ -251,6 +199,7 @@
       fill="currentColor"></path>
   </svg>
 
+  <!-- Portfolio Section -->
   <div class="portfolio-section">
     <div class="portfolio-container">
       <!-- Project 1 -->
@@ -259,31 +208,4 @@
         <div class="content">
           <h3>Project 1: Design System</h3>
           <p>This design system is built to ensure consistency and improve the efficiency of building UI components for large-scale applications.</p>
-          <a href="https://www.example.com" target="_blank">View Full Case Study →</a>
-        </div>
-      </div>
-
-  <script>
-    var typed = new Typed(".typed-words", {
-      strings: [
-        "I'm <span class='highlight'>Tor</span>",
-        "I'm a <span class='highlight'>designer</span>",
-        "I'm an <span class='highlight'>expert</span>"
-      ],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1500,
-      startDelay: 1500,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|",
-      attr: null,
-      onTypingPaused: function () {
-        const cursor = document.querySelector('.typed-cursor');
-        cursor.style.opacity = 1;
-      },
-    });
-  </script>
-</body>
-
-</html>
+          <a href="https://www.example.com
