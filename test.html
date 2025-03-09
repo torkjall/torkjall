@@ -37,14 +37,13 @@
     .typed-words {
       font-size: 88px;
       font-weight: 500;
-      padding-bottom: 10px;
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      min-height: 88px;  /* Fix height to avoid jumping */
-      line-height: 88px; /* Ensure cursor aligns with text */
-      position: relative;
+      line-height: 88px; /* Ensures the cursor aligns correctly */
       color: #FFFFFF;  /* Ensure text is white */
+      min-height: 88px;  /* Prevents jumping */
+      letter-spacing: -0.5px;  /* Adjust letter-spacing to match Torkjall */
     }
 
     /* Highlight style for words Tor, designer, expert */
@@ -57,6 +56,7 @@
       font-size: 2.25rem;
       margin-top: 20px;
       font-weight: 500;
+      letter-spacing: -0.5px;  /* Match letter-spacing */
     }
 
     /* Button styling */
@@ -86,11 +86,11 @@
     .typed-cursor {
       font-size: 88px;
       font-weight: 500;
-      line-height: 88px;
       color: #FFFFFF; /* White cursor color */
-      vertical-align: middle;
       animation: blink 0.8s step-end infinite;
       position: absolute;
+      bottom: 0;
+      left: 0;
     }
 
     /* Blinking animation for cursor */
