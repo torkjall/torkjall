@@ -125,6 +125,7 @@
       padding: 50px 20px;
       background-color: #171715; /* Same color as the rest of the page */
       width: 100%;
+      box-sizing: border-box;
     }
 
     .portfolio-container {
@@ -133,6 +134,8 @@
       justify-content: space-between;
       text-align: left;
       flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
     }
 
     .portfolio-item {
@@ -149,14 +152,14 @@
     }
 
     .portfolio-item img {
-      width: 45%;
+      width: 40%; /* Reduced image size */
       height: auto;
       object-fit: cover;
       border-radius: 8px;
     }
 
     .portfolio-item .content {
-      width: 50%;
+      width: 55%; /* Adjusted to fit the image */
       padding-left: 20px;
     }
 
