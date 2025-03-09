@@ -44,6 +44,7 @@
       color: #FFFFFF;  /* Ensure text is white */
       min-height: 88px;  /* Prevents jumping */
       letter-spacing: -0.5px;  /* Adjust letter-spacing to match Torkjall */
+      position: relative;  /* This ensures the cursor is positioned correctly within the text */
     }
 
     /* Highlight style for words Tor, designer, expert */
@@ -89,8 +90,9 @@
       color: #FFFFFF; /* White cursor color */
       animation: blink 0.8s step-end infinite;
       position: absolute;
-      bottom: 0;
-      left: 0;
+      top: 0;
+      left: 100%;
+      margin-left: 5px; /* Add a small margin to avoid overlap */
     }
 
     /* Blinking animation for cursor */
