@@ -82,15 +82,16 @@
 
     /* Cursor styling */
     .typed-cursor {
-      font-size: 110px; /* Increased cursor size */
-      color: #FFFFFF;
-      font-weight: 500;
-      position: absolute;
-      animation: blink 0.8s step-end infinite;
-      top: 0;
-      margin-left: 0; /* Removed space between cursor and text */
-      margin-top: -6px; /* Adjusted cursor position for better alignment */
-    }
+  font-size: 88px; /* Match text line-height */
+  color: #FFFFFF;
+  font-weight: 500;
+  position: absolute;
+  animation: blink 0.8s step-end infinite;
+  vertical-align: top; /* Ensures no unwanted shifting */
+  margin: 0; /* Remove extra spacing */
+  line-height: 88px; /* Exact match to text */
+}
+
 
     /* Blinking effect for cursor */
     @keyframes blink {
