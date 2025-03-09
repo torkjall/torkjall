@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Tor Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- Google Fonts for Silka -->
@@ -31,6 +31,7 @@
       padding: 20px;
       width: 100%;
       max-width: 800px;
+      position: relative; /* Position relative for cursor alignment */
     }
 
     /* Typed text styling */
@@ -40,11 +41,12 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      line-height: 1; /* No extra space between lines */
+      line-height: 88px; /* Ensure correct alignment */
       color: #FFFFFF;  /* Text color */
       min-height: 88px; /* Prevent jumping */
       letter-spacing: -0.5px;  /* Adjust spacing */
       position: relative;
+      margin-right: 10px;
     }
 
     /* Highlight style for words Tor, designer, expert */
@@ -89,8 +91,9 @@
       font-weight: 500;
       color: #FFFFFF; /* White cursor color */
       animation: blink 0.8s step-end infinite;
-      display: inline-block; /* Inline to keep the cursor next to text */
-      vertical-align: bottom; /* Align the cursor with the text */
+      position: absolute; /* Absolute positioning for cursor */
+      top: 0;
+      left: 100%; /* Place it after the text */
       margin-left: 5px; /* Adjust cursor position slightly */
     }
 
