@@ -89,10 +89,7 @@
       font-weight: 500;
       color: #FFFFFF; /* White cursor color */
       animation: blink 0.8s step-end infinite;
-      position: absolute;
-      top: 0;
-      left: 100%;
-      margin-left: 5px; /* Add a small margin to avoid overlap */
+      display: inline-block;  /* Keep the cursor in line with the text */
     }
 
     /* Blinking animation for cursor */
@@ -148,7 +145,7 @@
       backDelay: 1500,
       startDelay: 1500,
       loop: true,
-      showCursor: true,  // Show the cursor
+      showCursor: true,  // Ensure the cursor is visible
       cursorChar: "|",   // Cursor character (the vertical bar)
       attr: null,
     });
