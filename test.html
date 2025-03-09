@@ -71,7 +71,7 @@
       text-align: center;
       text-decoration: none;
       border-radius: 60px;
-      margin-top: 16px; /* Adjusted margin-top */
+      margin-top: 16px; /* Adjusted margin-top to 16px */
       margin-left: -30px; 
       transition: all 0.3s ease;
       display: inline-flex;
@@ -204,7 +204,8 @@
 <body>
   <div class="container">
     <div class="typed-wrapper">
-      <div class="typed-words"></div> <div class="typed-cursor"></div> </div>
+      <div class="typed-words"></div>
+    </div>
     <p class="p1">I specialize in mobile and web products</p>
     <a href="#" class="button">
       Learn More
@@ -214,25 +215,7 @@
     </a>
   </div>
   <script>
-    var typed = new Typed(".typed-words", {
-      strings: [
-        "I'm <span class='highlight'>Tor</span>",
-        "I'm a <span class='highlight'>designer</span>",
-        "I'm an <span class='highlight'>expert</span>"
-      ],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1500,
-      startDelay: 1500,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|",
-      attr: null,
-      onTypingPaused: function() {
-        const cursor = document.querySelector('.typed-cursor');
-        cursor.style.opacity = 1;
-      },
-    });
+    // ... (your Typed.js script) ...
   </script>
 </body>
 </html>
