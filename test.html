@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tor Example</title>
+  <title>Typed.js Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
@@ -71,7 +71,7 @@
       letter-spacing: 1px;
       text-align: center;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       margin-top: 30px;
       transition: all 0.3s ease;
       display: inline-flex;
@@ -79,17 +79,18 @@
     }
 
     .button:hover {
-      background-color: #FFFFFF;
-      color: #171715;
+      background-color: #222220;
+      color: #FFFFFF;
     }
 
     .arrow-icon {
       margin-left: 10px;
       transition: transform 0.3s ease;
+      transform: rotate(0deg);
     }
 
     .button:hover .arrow-icon {
-      transform: translateX(5px);
+      transform: rotate(45deg);
     }
 
     /* Cursor styling */
@@ -173,8 +174,7 @@
     <a href="#" class="button">
       Learn More
       <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
+        <polyline points="15 9 20 4 15 9 20 16"></polyline>
       </svg>
     </a>
   </div>
