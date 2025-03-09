@@ -3,35 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Tor Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+  
   <!-- Google Fonts for Silka -->
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
-  
+
   <style>
-    /* Body styles */
+    /* Body styling */
     body {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      height: 100vh;
       margin: 0;
       font-family: 'Silka', sans-serif;
       background-color: #171715;
       color: #FFFFFF;
-      padding: 0 20px;
-      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      padding: 0;
     }
 
-    /* Container for the text */
+    /* Container */
     .container {
-      text-align: left;
       margin-left: 64px;
-      padding: 20px;
-      width: 100%;
-      max-width: 800px;
-      position: relative; /* Position relative for cursor alignment */
+      position: relative;
     }
 
     /* Typed text styling */
@@ -39,17 +34,15 @@
       font-size: 88px;
       font-weight: 500;
       white-space: nowrap;
-      overflow: hidden;
+      color: #FFFFFF;
       display: inline-block;
-      line-height: 88px; /* Ensure correct alignment */
-      color: #FFFFFF;  /* Text color */
-      min-height: 88px; /* Prevent jumping */
-      letter-spacing: -0.5px;  /* Adjust spacing */
+      line-height: 88px;
+      letter-spacing: -0.5px;
       position: relative;
       margin-right: 10px;
     }
 
-    /* Highlight style for words Tor, designer, expert */
+    /* Highlight text (e.g. Tor, designer, expert) */
     .highlight {
       color: #FFEB6E;
     }
@@ -64,7 +57,6 @@
 
     /* Button styling */
     .button {
-      display: inline-block;
       padding: 16px 32px;
       font-size: 1.125rem;
       font-weight: 500;
@@ -85,20 +77,19 @@
       color: #171715;
     }
 
-    /* Cursor animation */
+    /* Typed.js cursor */
     .typed-cursor {
       font-size: 88px;
+      color: #FFFFFF;
       font-weight: 500;
-      color: #FFFFFF; /* White cursor color */
+      position: absolute;
       animation: blink 0.8s step-end infinite;
-      position: absolute; /* Absolute positioning for cursor */
       top: 0;
-      left: 100%; /* Place it after the text */
-      margin-left: 5px; /* Adjust cursor position slightly */
-      transform: translateY(0%); /* Ensure alignment with the text */
+      left: 100%;
+      margin-left: 5px;
     }
 
-    /* Blinking animation for cursor */
+    /* Blinking effect for cursor */
     @keyframes blink {
       50% {
         opacity: 0;
@@ -135,7 +126,6 @@
   <div class="container">
     <div class="typed-words"></div>
     <p class="p1">I specialize in mobile and web products</p>
-    <!-- Button similar to Torkjall -->
     <a href="#" class="button">Learn More</a>
   </div>
 
@@ -151,7 +141,7 @@
       backDelay: 1500,
       startDelay: 1500,
       loop: true,
-      showCursor: true,  // Ensure the cursor is visible
+      showCursor: true,  // Ensure cursor is visible
       cursorChar: "|",   // Cursor character (the vertical bar)
       attr: null,
     });
