@@ -89,11 +89,9 @@
       font-weight: 500;
       color: #FFFFFF; /* White cursor color */
       animation: blink 0.8s step-end infinite;
-      display: inline-block;
-      position: absolute; /* Absolutely positioned cursor */
-      top: 0; /* Aligns the cursor to the top */
-      left: 100%; /* Place the cursor right after the text */
-      margin-left: 5px; /* Fine-tune the cursor position */
+      display: inline-block; /* Inline to keep the cursor next to text */
+      line-height: 88px; /* Align cursor to line height of text */
+      margin-left: 5px; /* Adjust cursor position slightly */
     }
 
     /* Blinking animation for cursor */
