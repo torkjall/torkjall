@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typed.js Example</title>
+  <title>Tor Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- Google Fonts for Silka -->
@@ -41,13 +41,7 @@
       letter-spacing: -0.5px;
       min-height: 88px; /* Ensures the row height stays fixed */
       min-width: 1ch; /* Prevents cursor from shrinking */
-      visibility: hidden; /* Hides empty space but keeps size */
-    }
-
-    /* Keeps space for cursor when text is erased */
-    .typed-words::after {
-      content: " "; /* Invisible placeholder */
-      visibility: visible; /* Ensures cursor stays in place */
+      visibility: visible; /* Keeps the space even when the text is empty */
     }
 
     /* Highlight text (e.g. Tor, designer, expert) */
@@ -96,6 +90,7 @@
       height: 88px;
       display: inline-block;
       vertical-align: baseline;
+      left: 0; /* Ensure the cursor starts at the beginning */
     }
 
     /* Blinking effect for cursor */
