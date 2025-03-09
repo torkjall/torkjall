@@ -33,7 +33,7 @@
       max-width: 800px;
     }
 
-    /* Prevent text from jumping when erased */
+    /* Typed text */
     .typed-words {
       font-size: 88px;
       font-weight: 500;
@@ -41,20 +41,20 @@
       white-space: nowrap;
       overflow: hidden;
       display: inline-block;
-      min-height: 88px; /* Keep height consistent for the text */
-      line-height: 88px; /* Ensure text and cursor align */
-    }
-
-    /* Styling for the paragraph */
-    .p1 {
-      font-size: 2.25rem;
-      margin-top: 20px;
-      font-family: 'Silka', sans-serif;
+      min-height: 88px; /* Keep height consistent */
+      line-height: 88px; /* Ensure cursor aligns with text */
     }
 
     /* Highlight style for the words Tor, designer, expert */
     .highlight {
       color: #FFEB6E;
+    }
+
+    /* Paragraph styling */
+    .p1 {
+      font-size: 2.25rem;
+      margin-top: 20px;
+      font-family: 'Silka', sans-serif;
     }
 
     /* Button styling */
@@ -86,7 +86,7 @@
       font-size: 88px;
       font-weight: 500;
       line-height: 88px;
-      vertical-align: middle;  /* Align cursor to middle of text */
+      vertical-align: bottom;  /* Ensure the cursor aligns with the text baseline */
       animation: blink 0.8s step-end infinite;
     }
 
