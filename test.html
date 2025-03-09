@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tor Example</title>
+  <title>Typed.js Example</title>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <link href="https://fonts.googleapis.com/css2?family=Silka:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
@@ -14,6 +14,11 @@
       font-family: 'Silka', sans-serif;
       background-color: #171715;
       color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0;
       overflow-x: hidden;
       position: relative;
       min-height: 100vh;
@@ -32,7 +37,7 @@
       width: 100%;
     }
 
-    /* Typed text */
+    /* Typed text styling */
     .typed-wrapper {
       height: 90px;
       position: relative;
@@ -47,14 +52,17 @@
       display: inline-block;
       line-height: 90px;
       letter-spacing: -0.5px;
+      position: relative;
+      margin-right: 0;
+      z-index: 1;
     }
 
-    /* Highlight text */
+    /* Highlight text (e.g. Tor, designer, expert) */
     .highlight {
       color: #FFEB6E;
     }
 
-    /* Paragraph */
+    /* Paragraph text styling */
     .p1 {
       font-size: 2.25rem;
       margin: 0 0 16px 0;
@@ -62,98 +70,157 @@
       letter-spacing: -0.5px;
     }
 
-    /* Cursor */
-    .typed-cursor {
-      font-size: 100px;
+    /* Button styling */
+    .button {
+      padding: 16px 32px;
+      font-size: 1.125rem;
+      font-weight: 600;
       color: #FFFFFF;
-      font-weight: 500;
-      position: absolute;
-      animation: blink 0.8s step-end infinite;
-      display: inline-block;
-      margin-left: 2px;
+      background-color: #171715;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 60px;
+      margin-left: -30px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
     }
 
-    @keyframes blink {
-      50% {
-        opacity: 0;
+    .button:hover {
+      background-color: #FFEB6E;
+      color: #171715;
+    }
+
+    .arrow-icon {
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+      transform: rotate(-45deg);
+      width: 18px;
+      height: 16px;
+    }
+
+    .button:hover .arrow-icon {
+      transform: rotate(0deg);
+    }
+
+    /* Portfolio section */
+    .portfolio-section {
+      width: 100%;
+      padding: 100px 64px;
+      background-color: #222222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      margin-top: 100px;
+    }
+
+    .portfolio-text {
+      flex: 1;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .portfolio-text h2 {
+      font-size: 2.25rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-image {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .portfolio-image img {
+      width: 100%;
+      height: auto;
+      max-width: 350px; /* Reduced image size */
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .container {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+
+      .portfolio-section {
+        padding: 80px 32px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .portfolio-image {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      .portfolio-text h2 {
+        font-size: 1.75rem;
+      }
+
+      .portfolio-text {
+        font-size: 1.125rem;
+      }
+
+      .button {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1rem;
+        padding: 12px 24px;
       }
     }
 
-    /* Down Arrow */
+    @media (max-width: 480px) {
+      .container {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      .portfolio-section {
+        padding: 60px 16px;
+      }
+
+      .portfolio-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .portfolio-text {
+        font-size: 1rem;
+      }
+    }
+
+    /* Scroll Down Arrow */
     .down-arrow {
-      position: relative;
-      margin-top: 110px;
+      position: absolute;
+      bottom: 20px;
       left: 50%;
-      transform: translateX(-50%) rotate(90deg);
+      transform: translateX(-50%);
       cursor: pointer;
-      transition: color 0.3s ease;
+      z-index: 10;
+      transition: transform 0.3s ease;
     }
 
     .down-arrow:hover {
-      color: #FFEB6E;
+      transform: translateX(-50%) scale(1.2);
     }
 
-    /* Portfolio Section */
-    .project-section {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 100px 64px;
-      box-sizing: border-box;
+    /* Hover effect on arrow */
+    .down-arrow svg {
+      width: 18px;
+      height: 16px;
+      fill: #FFFFFF;
+      transition: fill 0.3s ease;
     }
 
-    .project-text {
-      max-width: 500px;
-      text-align: left;
+    .down-arrow:hover svg {
+      fill: #FFEB6E;
     }
 
-    .project-text h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #FFEB6E;
-    }
-
-    .project-text p {
-      font-size: 1.125rem;
-      margin: 16px 0;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    .project-image {
-      max-width: 300px; /* Smaller image */
-      height: auto;
-      border-radius: 10px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .project-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 80px 16px;
-      }
-
-      .project-text {
-        text-align: center;
-      }
-
-      .project-text h2 {
-        font-size: 2rem;
-      }
-
-      .project-text p {
-        font-size: 1rem;
-      }
-
-      .project-image {
-        width: 80%;
-        max-width: 280px;
-      }
-    }
   </style>
 </head>
 
@@ -162,35 +229,65 @@
     <div class="typed-wrapper">
       <div class="typed-words"></div>
     </div>
-    <p class="p1">I design <span class="highlight">minimalistic</span> and <span class="highlight">engaging</span> user experiences.</p>
+    <p class="p1">I specialize in mobile and web products</p>
+    <a href="#" class="button">
+      Learn More
+      <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
+          fill="currentColor"></path>
+      </svg>
+    </a>
   </div>
 
-  <!-- Down Arrow -->
-  <svg class="down-arrow" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd"
-      d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
-      fill="currentColor"></path>
-  </svg>
+  <div class="down-arrow" id="down-arrow" onclick="scrollToPortfolio()">
+    <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
+        fill="currentColor"></path>
+    </svg>
+  </div>
 
-  <!-- Portfolio -->
-  <div class="project-section" id="portfolio">
-    <div class="project-text">
+  <!-- Portfolio Section -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="portfolio-text">
       <h2>My First Project</h2>
-      <p>This is a description of my first project.</p>
+      <p>This is a description of my first project. It was a great experience building this project, and I am proud of the results. It involved creating both mobile and web components, and the process was very insightful.</p>
+      <a href="#" class="button">
+        View Project
+        <svg class="arrow-icon" width="18" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11.3431 0.92888L17.7071 7.29284C18.0976 7.68336 18.0976 8.31653 17.7071 8.70705L11.3431 15.071C10.9526 15.4615 10.3195 15.4615 9.92893 15.071C9.53841 14.6805 9.53841 14.0473 9.92893 13.6568L14.5858 8.99995H1C0.447715 8.99995 0 8.55223 0 7.99995C0 7.44766 0.447715 6.99995 1 6.99995L14.5858 6.99995L9.92893 2.34309C9.53841 1.95257 9.53841 1.3194 9.92893 0.92888C10.3195 0.538355 10.9526 0.538355 11.3431 0.92888Z"
+            fill="currentColor"></path>
+        </svg>
+      </a>
     </div>
-    <img class="project-image" src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965" alt="Project Image">
-  </div>
+    <div class="portfolio-image">
+      <img src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965" alt="Project Image">
+    </div>
+  </section>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Typed(".typed-words", {
-        strings: ["interfaces.", "experiences.", "products."],
-        typeSpeed: 100,
-        backSpeed: 60,
-        backDelay: 2000,
-        loop: true
-      });
+    // Scroll function for the arrow
+    function scrollToPortfolio() {
+      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    var typed = new Typed(".typed-words", {
+      strings: [
+        "I'm <span class='highlight'>Tor</span>",
+        "I'm a <span class='highlight'>designer</span>",
+        "I'm an <span class='highlight'>expert</span>"
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1500,
+      startDelay: 1500,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
     });
   </script>
 </body>
+
 </html>
