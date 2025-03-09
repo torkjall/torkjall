@@ -342,7 +342,8 @@
       </a>
     </div>
     <div class="project-image">
-      <img src="https://via.placeholder.com/600x400" alt="Project Image">
+      <img src="https://fee0131965.cbaul-cdnwnd.com/c46a35df51209f60a8d047fa5459e9ab/200000005-84a8484a86/iMockup%20-%20iPhone%2015%20Pro%20Max%20%284%29.webp?ph=fee0131965"
+        alt="Project Image">
     </div>
   </div>
 
@@ -356,18 +357,12 @@
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 1500,
-      startDelay: 1500,
+      startDelay: 500,
       loop: true,
       showCursor: true,
-      cursorChar: "|",
-      attr: null,
-      onTypingPaused: function () {
-        const cursor = document.querySelector('.typed-cursor');
-        cursor.style.opacity = 1;
-      },
     });
 
-    // Scroll to portfolio section
+    // Scroll down arrow click event
     document.querySelector('.down-arrow').addEventListener('click', () => {
       document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
     });
